@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/output.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/72c1663e23.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tailwind Test</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="absolute right-0 left-0 text-white z-10">
+        <div class="w-9/12 mx-auto py-5 flex justify-between items-center font-pt-sans">
+            <div>
+                <a href="#" class="text-lg">
+                    <img src="src/assets/img/logo.png" alt=class="w-full object-cover""Logo" class="w-1/5 h-1/5">
+                    <!-- Tailwind Test -->
+                </a>
+            </div>
+            <div>
+                <button
+                    class="py-2 px-4 rounded-md border-2 outline-transparent text-white border-white bg-transparent hover:bg-green-600 hover:text-white hover:border-green-600 transition-all"><span class="material-icons align-middle items-center justify-center mr-1">
+                        airplane_ticket
+                        </span>Add
+                    Listing</button>
+            </div>
+            <div class="space-x-4">
+                <button class="text-lg py-1.5 px-4 rounded-md border-2 outline-transparent text-white border-white bg-transparent hover:bg-green-700 hover:text-white hover:border-green-700 transition-all"><span class="material-icons align-middle items-center justify-center mr-1">
+                    login
+                    </span>Sing In</button>
+                <button
+                    class="text-lg py-1.5 px-4 rounded-md border-2 outline-transparent text-white border-white bg-green-600 hover:bg-green-700 hover:text-white hover:border-green-700 transition-all">Sign
+                    Up</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!-- Hero Banner -->
+        <section class="container">
+            <div class="relative h-screen">
+                <img src="src/assets/img/hero-imgs/hero-img1.jpg" class="w-full object-cover h-full"
+                    alt="Traveling man and woman" class="h-full w-full object-cover">
+                <div class="absolute inset-0 bg-black/50"></div>
+                <div class="absolute inset-0 h-full w-full">
+                    <div class="flex min-h-full w-full items-center justify-center">
+                        <div class="space-y-6">
+                            <div class="text-center">
+                                <h1 class="text-5xl font-bold text-white capitalize mb-4 font-Merri">Discover places you
+                                    love.</h1>
+                                <p class="text-xl text-white">Find your perfect trip, designed by insiders who know and
+                                    love their cities.</p>
+                            </div>
+                            <div class="flex gap-5">
+                                <div>
+                                    <input type="text" placeholder="Location"
+                                        class="rounded-md w-80 bg-white text-gray-600 py-3 px-6 focus:outline">
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="I'm Looking For..."
+                                        class="rounded-md w-80 bg-white text-gray-600 py-3 px-6 focus:outline">
+                                </div>
+                                <div>
+                                    <button type="button"
+                                        class="text-gray-100 py-2.5 px-6 rounded-md border text-whiteoutline-2 outline-transparent border-none bg-green-600 hover:bg-green-700 hover:text-gray-200 transition-all">
+                                        <span class="material-icons align-middle hidden md:inline-flex mr-1">
+                                            search
+                                        </span>Search</button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <ul class="flex gap-8 justify-center text-sm text-white font-Merri">
+                                    <li><a href="#" class="hover:text-white hover:bg-green-600 rounded px-3 py-2">
+                                            <span class="material-icons align-middle hidden md:inline-flex mr-1">
+                                                restaurant_menu
+                                            </span>
+                                            Restaurants</a></li>
+                                    <li><a href="#" class="hover:text-white hover:bg-green-600 rounded px-3 py-2"><span
+                                                class="material-icons align-middle hidden md:inline-flex mr-1">local_cafe</span>Café</a>
+                                    </li>
+                                    <li><a href="#" class="hover:text-white hover:bg-green-600 rounded px-3 py-2">
+                                            <span class="material-icons align-middle hidden md:inline-flex mr-1">
+                                                fitness_center
+                                            </span>
+                                            Gym</a></li>
+                                    <li><a href="#" class="hover:text-white hover:bg-green-600 rounded px-3 py-2"> <span
+                                                class="material-icons align-middle hidden md:inline-flex mr-1">
+                                                medication
+                                            </span>Hospital</a></li>
+                                    <li><a href="#" class="hover:text-white hover:bg-green-600 rounded px-3 py-2"> <span
+                                                class="material-icons align-middle hidden md:inline-flex mr-1">
+                                                school
+                                            </span>School</a></li>
+                                    <li><a href="#" class="hover:text-white hover:bg-green-600 rounded px-3 py-2"> <span
+                                                class="material-icons align-middle hidden md:inline-flex mr-1">
+                                                shopping_cart
+                                            </span>Shopping</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="">
+                <div class="bg-gray-50 py-32">
+                    <div class="w-9/12 mx-auto">
+                        <div class="text-center mb-12">
+                            <h3 class="text-4xl font-bold font-Merri text-gray-600 mb-3">Popular Places</h3>
+                            <p class="text-gray-600 text-xl">Discover Most Searched Places</p>
+                        </div>
+                        <div class="grid grid-cols-3 gap-6 mx-auto">
+                            <!-- Card One -->
+                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="src/assets/img/img1.jpg" alt="" class="w-full object-cover">
+                                </div>
+                                <!-- Starts -->
+                                <div class="px-6 py-4 space-y-2 relative">
+                                    <div>
+                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Grand Hotel</h3>
+                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                                place
+                                            </span>Somewhere, Japan</p>
+                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quisquam, quod.</p>
+                                    </div>
+                                    <div class="flex items-center text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star_half
+                                        </span>
+                                        <span class="ml-2 text-sm text-gray-600">
+                                            296 Reviews
+                                        </span>
+
+                                        <div class="absolute bottom-3 right-3"> <span
+                                                class="material-icons text-amber-400">
+                                                local_fire_department
+                                            </span></div>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Hotel</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Restaurant</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Cafe</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Card Two -->
+                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="src/assets/img/img2.jpg" alt="" class="w-full object-cover">
+                                </div>
+                                <!-- Starts -->
+                                <div class="px-6 py-4 space-y-2">
+                                    <div>
+                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Tokyo Temple</h3>
+                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                                place
+                                            </span>Somewhere, China</p>
+                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quisquam, quod.</p>
+                                    </div>
+                                    <div class="flex items-center text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star_half
+                                        </span>
+                                        <span class="ml-2 text-sm text-gray-600">
+                                            221 Reviews
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Education</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Arts</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Karate</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Card Three -->
+                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="src/assets/img/img3.jpg" alt="" class="w-full object-cover">
+                                </div>
+                                <!-- Starts -->
+                                <div class="px-6 py-4 space-y-2 relative">
+                                    <div>
+                                        <h3 class="text-xl font-bold font-Merri text-gray-600">St. Basil's Cathedral
+                                        </h3>
+                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                                place
+                                            </span>Somewhere, Russia</p>
+                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quisquam, quod.</p>
+                                    </div>
+                                    <div class="flex items-center text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star_half
+                                        </span>
+                                        <span class="ml-2 text-sm text-gray-600">
+                                            426 Reviews
+                                        </span>
+                                    </div>
+
+                                    <div>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Church</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Religion</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Prayer</span>
+                                    </div>
+                                    <div class="absolute bottom-3 right-3"> <span class="material-icons text-amber-400">
+                                            local_fire_department
+                                        </span></div>
+                                </div>
+                            </div>
+                            <!-- Card Four -->
+                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="src/assets/img/img4.jpg" alt="" class="w-full object-cover">
+                                </div>
+                                <!-- Starts -->
+                                <div class="px-6 py-4 space-y-2">
+                                    <div>
+                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Great Hotel</h3>
+                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                                place
+                                            </span>Somewhere, Africa</p>
+                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quisquam, quod.</p>
+                                    </div>
+                                    <div class="flex items-center text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star_half
+                                        </span>
+                                        <span class="ml-2 text-sm text-gray-600">
+                                            274 Reviews
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Hotel</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Restaurant</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Cafe</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="src/assets/img/img5.jpg" alt="" class="w-full object-cover">
+                                </div>
+                                <!-- Starts -->
+                                <div class="px-6 py-4 space-y-2">
+                                    <div>
+                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Beautiful Hotel</h3>
+                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                                place
+                                            </span>Somewhere, Florida</p>
+                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quisquam, quod.</p>
+                                    </div>
+                                    <div class="flex items-center text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star_half
+                                        </span>
+                                        <span class="ml-2 text-sm text-gray-600">
+                                            226 Reviews
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Hotel</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Restaurant</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Cafe</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Card Six -->
+                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="src/assets/img/img6.jpg" alt="" class="w-full object-cover">
+                                </div>
+                                <!-- Starts -->
+                                <div class="px-6 py-4 space-y-2 relative">
+                                    <div>
+                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Big Ship</h3>
+                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                                place
+                                            </span>Somewhere, Africa</p>
+                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quisquam, quod.</p>
+                                    </div>
+                                    <div class="flex items-center text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star_half
+                                        </span>
+                                        <span class="ml-2 text-sm text-gray-600">
+                                            326 Reviews
+                                        </span>
+                                    </div>
+                                    <div class="absolute bottom-3 right-3"> <span class="material-icons text-amber-400">
+                                            local_fire_department
+                                        </span></div>
+                                    <div>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Travel</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Restaurant</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Tourism</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Card Seven -->
+                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="src/assets/img/img7.jpg" alt="" class="w-full object-cover">
+                                </div>
+                                <!-- Starts -->
+                                <div class="px-6 py-4 space-y-2">
+                                    <div>
+                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Lodge</h3>
+                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                                place
+                                            </span>Somewhere, Dubai</p>
+                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quisquam, quod.</p>
+                                    </div>
+                                    <div class="flex items-center text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star_half
+                                        </span>
+                                        <span class="ml-2 text-sm text-gray-600">
+                                            216 Reviews
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Hotel</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Restaurant</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Cafe</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Card Eight -->
+                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="src/assets/img/img8.jpg" alt="" class="w-full object-cover">
+                                </div>
+                                <!-- Starts -->
+                                <div class="px-6 py-4 space-y-2">
+                                    <div>
+                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The White Hotel</h3>
+                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                                place
+                                            </span>Somewhere, Africa</p>
+                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quisquam, quod.</p>
+                                    </div>
+                                    <div class="flex items-center text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star_half
+                                        </span>
+                                        <span class="ml-2 text-sm text-gray-600">
+                                            254 Reviews
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Hotel</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Restaurant</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Cafe</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Card Nine -->
+                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="src/assets/img/img9.jpg" alt="" class="w-full object-cover">
+                                </div>
+                                <!-- Starts -->
+                                <div class="px-6 py-4 space-y-2">
+                                    <div>
+                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Palace Hotel</h3>
+                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                                place
+                                            </span>Somewhere, England</p>
+                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quisquam, quod.</p>
+                                    </div>
+                                    <div class="flex items-center text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star_half
+                                        </span>
+                                        <span class="ml-2 text-sm text-gray-600">
+                                            206 Reviews
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Hotel</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Restaurant</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Cafe</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Card Ten -->
+                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="src/assets/img/img10.jpg" alt="" class="w-full object-cover">
+                                </div>
+                                <!-- Starts -->
+                                <div class="px-6 py-4 space-y-2 relative">
+                                    <div>
+                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Walk Way</h3>
+                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                                place
+                                            </span>Somewhere, France</p>
+                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quisquam, quod.</p>
+                                    </div>
+                                    <div class="flex items-center text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star_half
+                                        </span>
+                                        <span class="ml-2 text-sm text-gray-600">
+                                            346 Reviews
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Hotel</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Restaurant</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Cafe</span>
+                                    </div>
+                                    <div class="absolute bottom-3 right-3"> <span class="material-icons text-amber-400">
+                                            local_fire_department
+                                        </span></div>
+                                </div>
+                            </div>
+                            <!-- Card Eleven -->
+                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="src/assets/img/img11.jpg" alt="" class="w-full object-cover">
+                                </div>
+                                <!-- Starts -->
+                                <div class="px-6 py-4 space-y-2 relative">
+                                    <div>
+                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Mecca Mosque</h3>
+                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                                place
+                                            </span>Somewhere, Saudi Arabia</p>
+                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quisquam, quod.</p>
+                                    </div>
+                                    <div class="flex items-center text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star_half
+                                        </span>
+                                        <span class="ml-2 text-sm text-gray-600">
+                                            499 Reviews
+                                        </span>
+                                    </div>
+
+                                    <span
+                                        class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Mosque</span>
+                                    <span
+                                        class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Religion</span>
+                                    <span
+                                        class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Prayer</span>
+                                    <div class="absolute bottom-3 right-3"> <span class="material-icons text-amber-400">
+                                            local_fire_department
+                                        </span></div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                            <!-- Card Twelve -->
+                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="src/assets/img/img12.jpg" alt="" class="w-full object-cover">
+                                </div>
+                                <!-- Starts -->
+                                <div class="px-6 py-4 space-y-2">
+                                    <div>
+                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Hiking Mountain</h3>
+                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                                place
+                                            </span>Somewhere, Egypt</p>
+                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quisquam, quod.</p>
+                                    </div>
+                                    <div class="flex items-center text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star
+                                        </span>
+                                        <span class="material-icons text-green-600">
+                                            star_half
+                                        </span>
+                                        <span class="ml-2 text-sm text-gray-600">
+                                            175 Reviews
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Hotel</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Restaurant</span>
+                                        <span
+                                            class="text-xs px-2.5 py-0.5 bg-green-200 text-green-800 rounded-full border border-green-700">Cafe</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="mt-12 text-center">
+                            <button type="button"
+                                class="rounded-md py-2.5 px-6 bg-slate-100 border border-gray-500 text-gray-600  shadow text-lg hover:shadow-lg hover:bg-green-600 hover:text-white transition-all ease-in-out">
+                                <span class="material-icons hover:text-white">
+                                    rocket_launch
+                                </span> Discover More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

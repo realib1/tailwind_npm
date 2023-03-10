@@ -1,0 +1,14 @@
+{
+  "name": "tailwind_init",
+  "version": "1.0.0",
+  "description": "Tailwind setup with only npm ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "author": "Ibrahim",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}
