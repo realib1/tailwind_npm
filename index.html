@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,98 +14,106 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="dist/css/output.css">
 
+    <script src="script.js" defer></script>
+
     <title>Tailwind Test</title>
 </head>
 
-<body>
+<body class="font-pt-sans">
     <!-- Navigation Bar -->
-    <nav class="absolute right-0 left-0 text-white z-10">
-        <div class="w-9/12 mx-auto py-5 flex justify-between items-center font-pt-sans">
-            <div>
-                <a href="#" class="text-lg">
-                    <img src="src/assets/img/logo.png" alt=class="w-full object-cover""Logo" class="w-1/5 h-1/5">
-                    <!-- Tailwind Test -->
-                </a>
-            </div>
-            <div>
-                <button
-                    class="py-2 px-4 rounded-md border-2 outline-transparent text-white border-white bg-transparent hover:bg-green-600 hover:text-white hover:border-green-600 transition-all"><span
-                        class="material-icons align-middle items-center justify-center mr-1">
+    <div class="sticky top-0 z-50">
+        <nav class="navbar absolute right-0 left-0 transparent--navbar z-10 transition-all">
+            <div class="w-11/12 md:w-10/12 xl:w-8/12 mx-auto py-3 lg:py-5 flex justify-between items-center font-pt-sans text-sm lg:text-lg">
+                <div class="w-1/5 h-1/5">
+                    <a href="#" class="text-lg">
+                        
+                        <img src="src/assets/img/logo.png" alt="Logo" class="object-cover object-center w-1/2 h-1/2 lg:w-1/4 lg:h-1/4">
+                        <!-- Tailwind Test -->
+                    </a>
+                </div>
+                <div>
+                    <button
+                        class="py-1 px-2 rounded-md border-2 outline-transparent text-white border-white bg-transparent hover:bg-green-600 hover:text-white hover:border-green-600 transition-all text-sm lg:text-lg">
+                        <!-- <span
+                        class="material-icons align-middle items-center justify-center text-white text-sm lg:text-lg">
                         airplane_ticket
-                    </span>Add
-                    Listing</button>
+                    </span> -->
+                        Boarding
+                        </button>
+                </div>
+                <div class="space-x-4">
+                    <button
+                        class="py-1 px-2 rounded-md border-2 outline-transparent text-white border-white bg-transparent hover:bg-green-700 hover:text-white hover:border-green-700 transition-all text-sm lg:text-lg">
+                        <!-- <span
+                            class="material-icons align-middle items-center justify-center mr-1 text-sm">
+                            login
+                        </span> -->
+                        Sign In
+                    </button>
+                    <button
+                        class="text-sm lg:text-lg py-1 px-2 rounded-md border-2 outline-transparent text-white border-white bg-green-600 hover:bg-green-700 hover:text-white hover:border-green-700 transition-all">
+                        Sign Up
+                    </button>
+                </div>
             </div>
-            <div class="space-x-4">
-                <button
-                    class="text-lg py-1.5 px-4 rounded-md border-2 outline-transparent text-white border-white bg-transparent hover:bg-green-700 hover:text-white hover:border-green-700 transition-all"><span
-                        class="material-icons align-middle items-center justify-center mr-1">
-                        login
-                    </span>Sing In</button>
-                <button
-                    class="text-lg py-1.5 px-4 rounded-md border-2 outline-transparent text-white border-white bg-green-600 hover:bg-green-700 hover:text-white hover:border-green-700 transition-all">Sign
-                    Up</button>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
     <main>
         <!-- Hero Banner -->
-        <section class="container">
-            <div class="relative h-screen">
-                <img src="src/assets/img/hero-imgs/hero-img1.jpg" class="w-full object-cover h-full"
-                    alt="Traveling man and woman" class="h-full w-full object-cover">
-                <div class="absolute inset-0 bg-black/50"></div>
+        <section class="heroHeader relative h-screen bg-cover bg-center" style="background-image: url('src/assets/img/hero-imgs/hero-img1.jpg');">
+                <!-- <img src="src/assets/img/hero-imgs/hero-img1.jpg" alt="Traveling man and woman" class="h-full w-full object-cover"> -->
+                <div class="absolute inset-0 bg-black/75"></div>
                 <div class="absolute inset-0 h-full w-full">
                     <div class="flex min-h-full w-full items-center justify-center">
                         <div class="space-y-6">
                             <div class="text-center">
-                                <h1 class="text-5xl font-bold text-white capitalize mb-4 font-Merri">Discover places you
+                                <h1 class="text-xl md:text-4xl lg:text-5xl font-bold text-white capitalize mb-4 font-Merri">Discover places you
                                     love.</h1>
-                                <p class="text-xl text-white">Find your perfect trip, designed by insiders who know and
-                                    love their cities.</p>
+                                <p class="text-sm md:text-lg text-white w-10/12 mx-auto">Find your perfect trip, designed by insiders who know and love their cities.</p>
                             </div>
-                            <div class="flex gap-5">
+                            <div class="flex flex-col lg:flex-row gap-5 items-center justify-center">
                                 <div>
                                     <input type="text" placeholder="Location"
-                                        class="rounded-md w-80 bg-white text-gray-600 py-3 px-6 focus:outline">
+                                        class="rounded-md w-60 md:w-80 bg-white text-gray-600 py-2 px-4 lg:py-3 ;lg:px-6 focus:outline">
                                 </div>
                                 <div>
                                     <input type="text" placeholder="I'm Looking For..."
-                                        class="rounded-md w-80 bg-white text-gray-600 py-3 px-6 focus:outline">
+                                        class="rounded-md w-60 md:w-80 bg-white text-gray-600 py-2 px-4 lg:py-3 lg:px-6 focus:outline">
                                 </div>
                                 <div>
                                     <button type="button"
-                                        class="text-gray-100 py-2.5 px-6 rounded-md border text-whiteoutline-2 outline-transparent border-none bg-green-600 hover:bg-green-700 hover:text-gray-200 transition-all">
-                                        <span class="material-icons align-middle hidden md:inline-flex mr-1">
+                                        class=" text-gray-100 py-2 px-4 lg:py-2.5 px-6 rounded-md border text-whiteoutline-2 outline-transparent border-none bg-green-600 hover:bg-green-700 hover:text-gray-200 transition-all">
+                                        <span class="material-icons align-middle mr-1 ">
                                             search
                                         </span>Search</button>
                                 </div>
                             </div>
 
-                            <div>
-                                <ul class="flex gap-8 justify-center text-sm text-white font-Merri">
-                                    <li><a href="#" class="hover:text-white hover:bg-green-600 rounded px-3 py-2">
-                                            <span class="material-icons align-middle hidden md:inline-flex mr-1">
+                            <div class="w-9/12 lg:w-full mx-auto">
+                                <ul class="flex gap-4 lg:gap-8 justify-center text-sm text-white font-Merri flex-wrap">
+                                    <li><a href="#" class="p-2  hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2">
+                                            <span class="material-icons align-middle mr-1">
                                                 restaurant_menu
                                             </span>
                                             Restaurants</a></li>
-                                    <li><a href="#" class="hover:text-white hover:bg-green-600 rounded px-3 py-2"><span
-                                                class="material-icons align-middle hidden md:inline-flex mr-1">local_cafe</span>Café</a>
+                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2"><span
+                                                class="material-icons align-middle mr-1">local_cafe</span>Café</a>
                                     </li>
-                                    <li><a href="#" class="hover:text-white hover:bg-green-600 rounded px-3 py-2">
-                                            <span class="material-icons align-middle hidden md:inline-flex mr-1">
+                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2">
+                                            <span class="material-icons align-middle mr-1">
                                                 fitness_center
                                             </span>
                                             Gym</a></li>
-                                    <li><a href="#" class="hover:text-white hover:bg-green-600 rounded px-3 py-2"> <span
-                                                class="material-icons align-middle hidden md:inline-flex mr-1">
+                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2"> <span
+                                                class="material-icons align-middle mr-1">
                                                 medication
                                             </span>Hospital</a></li>
-                                    <li><a href="#" class="hover:text-white hover:bg-green-600 rounded px-3 py-2"> <span
-                                                class="material-icons align-middle hidden md:inline-flex mr-1">
+                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2"> <span
+                                                class="material-icons align-middle mr-1">
                                                 school
                                             </span>School</a></li>
-                                    <li><a href="#" class="hover:text-white hover:bg-green-600 rounded px-3 py-2"> <span
-                                                class="material-icons align-middle hidden md:inline-flex mr-1">
+                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2"> <span
+                                                class="material-icons align-middle mr-1">
                                                 shopping_cart
                                             </span>Shopping</a></li>
                                 </ul>
@@ -113,52 +121,49 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
 
         <!-- Popular Places -->
-        <section class="container">
-            <div class="">
-                <div class="bg-gray-50 py-32">
-                    <div class="w-9/12 mx-auto">
+        <section class="bg-slate-100 py-32">
+                    <div class="w-8/12 md:w-10/12 lg:w-8/12 mx-auto">
                         <div class="text-center mb-12">
-                            <h3 class="text-4xl font-bold font-Merri text-gray-600 mb-3">Popular Places</h3>
-                            <p class="text-gray-600 text-xl">Discover Most Searched Places</p>
+                            <h3 class="text-2xl lg:text-4xl font-bold font-Merri text-gray-600 mb-3">Popular Places</h3>
+                            <p class="text-gray-600 text-sm">Discover Most Searched Places</p>
                         </div>
-                        <div class="grid grid-cols-3 gap-6 mx-auto">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto">
                             <!-- Card One -->
-                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
-                                    <img src="src/assets/img/img1.jpg" alt="" class="w-full object-cover">
+                                    <img src="src/assets/img/img1.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2 relative">
                                     <div>
-                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Grand Hotel</h3>
-                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
-                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Grand Hotel</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Japan</p>
-                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
-                                    <div class="flex items-center text-sm font-pt-sans">
-                                        <span class="material-icons text-green-600">
+                                    <div class="flex items-center md:text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star_half
                                         </span>
-                                        <span class="ml-2 text-sm text-gray-600">
+                                        <span class="ml-2 text-xs md:text-sm text-gray-600">
                                             296 Reviews
                                         </span>
 
@@ -179,38 +184,38 @@
                                 </div>
                             </div>
                             <!-- Card Two -->
-                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
-                                    <img src="src/assets/img/img2.jpg" alt="" class="w-full object-cover">
+                                    <img src="src/assets/img/img2.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2">
                                     <div>
-                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Tokyo Temple</h3>
-                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
-                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Tokyo Temple</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, China</p>
-                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
-                                    <div class="flex items-center text-sm font-pt-sans">
-                                        <span class="material-icons text-green-600">
+                                    <div class="flex items-center md:text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star_half
                                         </span>
-                                        <span class="ml-2 text-sm text-gray-600">
+                                        <span class="ml-2 text-xs md:text-sm text-gray-600">
                                             221 Reviews
                                         </span>
                                     </div>
@@ -226,39 +231,39 @@
                                 </div>
                             </div>
                             <!-- Card Three -->
-                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
-                                    <img src="src/assets/img/img3.jpg" alt="" class="w-full object-cover">
+                                    <img src="src/assets/img/img3.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2 relative">
                                     <div>
-                                        <h3 class="text-xl font-bold font-Merri text-gray-600">St. Basil's Cathedral
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">St. Basil's Cathedral
                                         </h3>
-                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
-                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Russia</p>
-                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
-                                    <div class="flex items-center text-sm font-pt-sans">
-                                        <span class="material-icons text-green-600">
+                                    <div class="flex items-center md:text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star_half
                                         </span>
-                                        <span class="ml-2 text-sm text-gray-600">
+                                        <span class="ml-2 text-xs md:text-sm text-gray-600">
                                             426 Reviews
                                         </span>
                                     </div>
@@ -277,38 +282,38 @@
                                 </div>
                             </div>
                             <!-- Card Four -->
-                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
-                                    <img src="src/assets/img/img4.jpg" alt="" class="w-full object-cover">
+                                    <img src="src/assets/img/img4.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2">
                                     <div>
-                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Great Hotel</h3>
-                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
-                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Great Hotel</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Africa</p>
-                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
-                                    <div class="flex items-center text-sm font-pt-sans">
-                                        <span class="material-icons text-green-600">
+                                    <div class="flex items-center md:text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star_half
                                         </span>
-                                        <span class="ml-2 text-sm text-gray-600">
+                                        <span class="ml-2 text-xs md:text-sm text-gray-600">
                                             274 Reviews
                                         </span>
                                     </div>
@@ -324,38 +329,38 @@
                                 </div>
                             </div>
                             <!-- Card 5 -->
-                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
-                                    <img src="src/assets/img/img5.jpg" alt="" class="w-full object-cover">
+                                    <img src="src/assets/img/img5.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2">
                                     <div>
-                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Beautiful Hotel</h3>
-                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
-                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Beautiful Hotel</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Florida</p>
-                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
-                                    <div class="flex items-center text-sm font-pt-sans">
-                                        <span class="material-icons text-green-600">
+                                    <div class="flex items-center md:text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star_half
                                         </span>
-                                        <span class="ml-2 text-sm text-gray-600">
+                                        <span class="ml-2 text-xs md:text-sm text-gray-600">
                                             226 Reviews
                                         </span>
                                     </div>
@@ -371,38 +376,38 @@
                                 </div>
                             </div>
                             <!-- Card Six -->
-                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
-                                    <img src="src/assets/img/img6.jpg" alt="" class="w-full object-cover">
+                                    <img src="src/assets/img/img6.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2 relative">
                                     <div>
-                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Big Ship</h3>
-                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
-                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Big Ship</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Africa</p>
-                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
-                                    <div class="flex items-center text-sm font-pt-sans">
-                                        <span class="material-icons text-green-600">
+                                    <div class="flex items-center md:text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star_half
                                         </span>
-                                        <span class="ml-2 text-sm text-gray-600">
+                                        <span class="ml-2 text-xs md:text-sm text-gray-600">
                                             326 Reviews
                                         </span>
                                     </div>
@@ -421,38 +426,38 @@
                                 </div>
                             </div>
                             <!-- Card Seven -->
-                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
-                                    <img src="src/assets/img/img7.jpg" alt="" class="w-full object-cover">
+                                    <img src="src/assets/img/img7.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2">
                                     <div>
-                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Lodge</h3>
-                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
-                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Lodge</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Dubai</p>
-                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
-                                    <div class="flex items-center text-sm font-pt-sans">
-                                        <span class="material-icons text-green-600">
+                                    <div class="flex items-center md:text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star_half
                                         </span>
-                                        <span class="ml-2 text-sm text-gray-600">
+                                        <span class="ml-2 text-xs md:text-sm text-gray-600">
                                             216 Reviews
                                         </span>
                                     </div>
@@ -468,38 +473,38 @@
                                 </div>
                             </div>
                             <!-- Card Eight -->
-                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
-                                    <img src="src/assets/img/img8.jpg" alt="" class="w-full object-cover">
+                                    <img src="src/assets/img/img8.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2">
                                     <div>
-                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The White Hotel</h3>
-                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
-                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The White Hotel</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Africa</p>
-                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
-                                    <div class="flex items-center text-sm font-pt-sans">
-                                        <span class="material-icons text-green-600">
+                                    <div class="flex items-center md:text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star_half
                                         </span>
-                                        <span class="ml-2 text-sm text-gray-600">
+                                        <span class="ml-2 text-xs md:text-sm text-gray-600">
                                             254 Reviews
                                         </span>
                                     </div>
@@ -515,38 +520,38 @@
                                 </div>
                             </div>
                             <!-- Card Nine -->
-                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
-                                    <img src="src/assets/img/img9.jpg" alt="" class="w-full object-cover">
+                                    <img src="src/assets/img/img9.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2">
                                     <div>
-                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Palace Hotel</h3>
-                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
-                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Palace Hotel</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, England</p>
-                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
-                                    <div class="flex items-center text-sm font-pt-sans">
-                                        <span class="material-icons text-green-600">
+                                    <div class="flex items-center md:text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star_half
                                         </span>
-                                        <span class="ml-2 text-sm text-gray-600">
+                                        <span class="ml-2 text-xs md:text-sm text-gray-600">
                                             206 Reviews
                                         </span>
                                     </div>
@@ -562,38 +567,38 @@
                                 </div>
                             </div>
                             <!-- Card Ten -->
-                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
-                                    <img src="src/assets/img/img10.jpg" alt="" class="w-full object-cover">
+                                    <img src="src/assets/img/img10.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2 relative">
                                     <div>
-                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Walk Way</h3>
-                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
-                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Walk Way</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, France</p>
-                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
-                                    <div class="flex items-center text-sm font-pt-sans">
-                                        <span class="material-icons text-green-600">
+                                    <div class="flex items-center md:text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star_half
                                         </span>
-                                        <span class="ml-2 text-sm text-gray-600">
+                                        <span class="ml-2 text-xs md:text-sm text-gray-600">
                                             346 Reviews
                                         </span>
                                     </div>
@@ -611,38 +616,38 @@
                                 </div>
                             </div>
                             <!-- Card Eleven -->
-                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
-                                    <img src="src/assets/img/img11.jpg" alt="" class="w-full object-cover">
+                                    <img src="src/assets/img/img11.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2 relative">
                                     <div>
-                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Mecca Mosque</h3>
-                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
-                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Mecca Mosque</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Saudi Arabia</p>
-                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
-                                    <div class="flex items-center text-sm font-pt-sans">
-                                        <span class="material-icons text-green-600">
+                                    <div class="flex items-center md:text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star_half
                                         </span>
-                                        <span class="ml-2 text-sm text-gray-600">
+                                        <span class="ml-2 text-xs md:text-sm text-gray-600">
                                             499 Reviews
                                         </span>
                                     </div>
@@ -662,38 +667,38 @@
                                 </div>
                             </div>
                             <!-- Card Twelve -->
-                            <div class="bg-white rounded-md shadow max-w-xl overflow-hidden">
+                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
-                                    <img src="src/assets/img/img12.jpg" alt="" class="w-full object-cover">
+                                    <img src="src/assets/img/img12.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2">
                                     <div>
-                                        <h3 class="text-xl font-bold font-Merri text-gray-600">The Hiking Mountain</h3>
-                                        <p class="text-gray-600 text-sm font-pt-sans py-1"> <span
-                                                class="material-icons align-middle text-amber-500 -ml-1">
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Hiking Mountain</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                                class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Egypt</p>
-                                        <p class="text-gray-600 text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
-                                    <div class="flex items-center text-sm font-pt-sans">
-                                        <span class="material-icons text-green-600">
+                                    <div class="flex items-center md:text-sm font-pt-sans">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star
                                         </span>
-                                        <span class="material-icons text-green-600">
+                                        <span class="material-icons text-green-600 text-sm md:text-lg">
                                             star_half
                                         </span>
-                                        <span class="ml-2 text-sm text-gray-600">
+                                        <span class="ml-2 text-xs md:text-sm text-gray-600">
                                             175 Reviews
                                         </span>
                                     </div>
@@ -711,24 +716,22 @@
                         </div>
                         <div class="mt-12 text-center">
                             <button type="button"
-                                class="rounded-md py-2.5 px-6 bg-slate-100 border border-gray-500 text-gray-600  shadow text-lg hover:shadow-lg hover:bg-green-600 hover:text-white transition-all ease-in-out">
+                                class="rounded-md py-2.5 px-6 bg-green-600 text-slate-100 lg:bg-slate-100 border border-gray-500 lg:text-gray-600  shadow lg:text-lg lg:hover:shadow-lg lg:hover:bg-green-600 lg:hover:text-white transition-all ease-in-out">
                                 🚀 Discover More</button>
                         </div>
                     </div>
-                </div>
-            </div>
         </section>
 
         <!-- Discover By Categories -->
-        <section class="container bg-sky-50 py-32">
+        <section class="bg-sky-50 py-32">
             <div class="w-9/12 mx-auto">
                 <div class="text-enter">
-                    <h3 class="text-4xl font-bold text-gray-600 text-center capitalize mb-4 font-Merri">Discover By
+                    <h3 class="text-2xl lg:text-4xl font-bold text-gray-600 text-center capitalize mb-4 font-Merri">Discover By
                         Categories</h3>
-                    <p class="text-center text-gray-600 text-xl font-pt-sans">Discover places by categories</p>
+                    <p class="text-center text-gray-600 font-pt-sans text-sm">Discover places by categories</p>
                 </div>
                 <div class="py-10">
-                    <div class="grid grid-cols-4 gap-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 place-items-center">
                         <a href="#" class="p-4 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
                             <img src="src/assets/img/discover/coffee_tea.jpg" alt=""
                                 class="w-32 h-32 rounded-full mx-auto">
@@ -787,7 +790,7 @@
                     </div>
                     <div class="mt-12 text-center">
                         <button type="button"
-                            class="rounded-md py-2.5 px-6 bg-slate-100 border border-gray-500 text-gray-600  shadow text-lg hover:shadow-lg hover:bg-green-600 hover:text-white transition-all ease-in-out">
+                            class="rounded-md py-2.5 px-6 lg:bg-slate-100 border border-gray-500 text-slate-200 lg:text-gray-600  shadow text-sm md:text-sm lg:text-lg bg-purple-700 lg:hover:shadow-lg lg:hover:bg-green-600 lg:hover:text-white transition-all ease-in-out">
                             👀 See More</button>
                     </div>
                 </div>
@@ -795,19 +798,19 @@
         </section>
 
         <!-- Collections -->
-        <section class="container bg-green-50 py-32">
-            <div class="w-9/12 mx-auto">
+        <section class="bg-green-50 py-32">
+            <div class="w-10/12 md:w-8/12 mx-auto">
                 <div class="text-entern mb-6">
-                    <h3 class="text-4xl font-bold text-gray-600 text-center capitalize mb-2 font-Merri">Collections</h3>
-                    <p class="text-center text-gray-600 text-xl font-pt-sans">Discover List Of Top Places</p>
+                    <h3 class="text-2xl lg:text-4xl font-bold text-gray-600 text-center capitalize mb-2 font-Merri">Collections</h3>
+                    <p class="text-center text-gray-600 font-pt-sans text-sm">Discover List Of Top Places</p>
                 </div>
-                <div class="grid grid-cols-4 gap-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 place-items-center">
                     <div class="relative w-52 h-64 overflow-hidden shadow-md hover:shadow-lg">
                         <img src="src/assets/img/img15.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-lg font-bold font-Merri">New Homes</h4>
-                                <p class="text-gray-200 text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Homes</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -815,8 +818,8 @@
                         <img src="src/assets/img/img13.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-lg font-bold font-Merri">New Lake</h4>
-                                <p class="text-gray-200 text-sm font-pt-sans">121 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Lake</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">121 More</p>
                             </div>
                         </div>
                     </div>
@@ -824,8 +827,8 @@
                         <img src="src/assets/img/img14.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-lg font-bold font-Merri">Places</h4>
-                                <p class="text-gray-200 text-sm font-pt-sans">131 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">131 More</p>
                             </div>
                         </div>
                     </div>
@@ -833,8 +836,8 @@
                         <img src="src/assets/img/img16.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-lg font-bold font-Merri">Religion</h4>
-                                <p class="text-gray-200 text-sm font-pt-sans">231 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">Religion</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">231 More</p>
                             </div>
                         </div>
                     </div>
@@ -842,8 +845,8 @@
                         <img src="src/assets/img/img18.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-lg font-bold font-Merri">New Places</h4>
-                                <p class="text-gray-200 text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -851,8 +854,8 @@
                         <img src="src/assets/img/img19.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-lg font-bold font-Merri">New Places</h4>
-                                <p class="text-gray-200 text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -860,8 +863,8 @@
                         <img src="src/assets/img/img20.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-lg font-bold font-Merri">New Places</h4>
-                                <p class="text-gray-200 text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -869,8 +872,8 @@
                         <img src="src/assets/img/img21.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-lg font-bold font-Merri">New Places</h4>
-                                <p class="text-gray-200 text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -878,8 +881,8 @@
                         <img src="src/assets/img/img22.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-lg font-bold font-Merri">Hotels</h4>
-                                <p class="text-gray-200 text-sm font-pt-sans">251 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">Hotels</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">251 More</p>
                             </div>
                         </div>
                     </div>
@@ -887,8 +890,8 @@
                         <img src="src/assets/img/img23.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-lg font-bold font-Merri">New Places</h4>
-                                <p class="text-gray-200 text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -896,8 +899,8 @@
                         <img src="src/assets/img/img24.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-lg font-bold font-Merri">New Places</h4>
-                                <p class="text-gray-200 text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -905,8 +908,8 @@
                         <img src="src/assets/img/img25.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-lg font-bold font-Merri">New Places</h4>
-                                <p class="text-gray-200 text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -914,29 +917,30 @@
                 </div>
                 <div class="mt-12 text-center">
                     <button type="button"
-                        class="rounded-md py-2.5 px-6 bg-slate-100 border border-gray-500 text-gray-600  shadow text-lg hover:shadow-lg hover:bg-green-600 hover:text-white transition-all ease-in-out">
+                        class="rounded-md py-2.5 px-6 bg-purple-700 text-slate-100 lg:bg-slate-100 border border-gray-500 lg:text-gray-600  shadow text-xs md:text-sm lg:text-lg lg:hover:shadow-lg lg:hover:bg-green-600 lg:hover:text-white transition-all ease-in-out">
                         🎁 More Collections</button>
                 </div>
             </div>
         </section>
 
         <!-- Teams -->
-        <section class="container bg-slate-400 py-32 relative">
-            <div class="w-9/12 mx-auto">
-                <div class="flex items-center gap-3">
-                    <div class="w-1/2 flex gap-10">
-                        <div class="team absolute h-full w-1/2 top-0 left-0 bottom-0 opacity-30"></div>
+        <section class="bg-slate-400 py-32 relative">
+            <div class="w-8/12 lg:w-10/12 xl:w-8/12 mx-auto">
+                <div class="flex flex-col lg:flex-row  items-center gap-12">
+                    <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
+                        <div class="hidden lg:inline absolute h-full w-1/2 top-0 left-0 bottom-0 opacity-30"></div>
                         <div
-                            class="w-1/2 absolute h-full bg-gradient-to-l from-slate-400 via-transparent top-0 left-0 bottom-0 ">
+                            class="hidden lg:inline w-1/2 absolute h-full bg-gradient-to-l from-slate-400 via-transparent top-0 left-0 bottom-0 ">
                         </div>
+                        <div class="flex flex-col md:flex-row justify-center gap-12">
                         <div class="flex gap-12 flex-col">
                             <div class="relative">
                                 <img src="src/assets/img/team/team3.jpg" alt=""
-                                    class="w-48 h-64 rounded object-cover shadow-md overflow-hidden">
+                                    class="w-full md:w-48 h-64 rounded object-cover shadow-md">
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-slate-800 via-transparent rounded-md">
                                     <div class="absolute bottom-2 left-3">
-                                        <h4 class="text-gray-200 text-lg font-bold font-Merri">Jane Doe</h4>
+                                        <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">Jane Doe</h4>
                                         <p class="text-gray-200 text-sm font-pt-sans">CEO</p>
                                     </div>
                                 </div>
@@ -944,11 +948,11 @@
                             </div>
                             <div class="relative">
                                 <img src="src/assets/img/team/team.jpg" alt=""
-                                    class="w-48 h-64 rounded object-cover shadow-md overflow-hidden">
+                                    class="w-full md:w-48 h-64 rounded object-cover shadow-md">
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-slate-800 via-transparent rounded-md">
                                     <div class="absolute bottom-2 left-3">
-                                        <h4 class="text-gray-200 text-lg font-bold font-Merri">Jane Doe</h4>
+                                        <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">Jane Doe</h4>
                                         <p class="text-gray-200 text-sm font-pt-sans">CEO</p>
                                     </div>
                                 </div>
@@ -958,11 +962,11 @@
                         <div class="flex flex-col gap-12 mt-12">
                             <div class="relative">
                                 <img src="src/assets/img/team/team2.jpg" alt=""
-                                    class="w-48 h-64 rounded object-cover shadow-md overflow-hidden">
+                                    class="w-full md:w-48 h-64 rounded object-cover shadow-md">
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-slate-800 via-transparent rounded-md">
                                     <div class="absolute bottom-2 left-3">
-                                        <h4 class="text-gray-200 text-lg font-bold font-Merri">Jane Doe</h4>
+                                        <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">Jane Doe</h4>
                                         <p class="text-gray-200 text-sm font-pt-sans">CEO</p>
                                     </div>
                                 </div>
@@ -970,11 +974,11 @@
                             </div>
                             <div class="relative">
                                 <img src="src/assets/img/team/team1.jpg" alt=""
-                                    class="w-48 h-64 rounded object-cover shadow-md overflow-hidden">
+                                    class="w-full md:w-48 h-64 rounded object-cover shadow-md">
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-slate-800 via-transparent rounded-md">
                                     <div class="absolute bottom-2 left-3">
-                                        <h4 class="text-gray-200 text-lg font-bold font-Merri">Jane Doe</h4>
+                                        <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">Jane Doe</h4>
                                         <p class="text-gray-200 text-sm font-pt-sans">CEO</p>
                                     </div>
                                 </div>
@@ -982,23 +986,23 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                    <div class="w-full lg:w-1/2">
 
-                    <div class="w-1/2">
-
-                        <p class="text-sm font-bold uppercase text-slate-500 mb-1 font-pt-sans">Our Support Heros</p>
-                        <h2 class="text-4xl font-bold text-slate-700 font-Merri">Meet Our Team</h2>
-                        <p class="mt-3 text-slate-600 text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <p class=" text-xs md:text-sm lg:text-base xl:text-lg font-bold uppercase text-slate-500 mb-1 font-pt-sans">Our Support Heros</p>
+                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-700 font-Merri">Meet Our Team</h2>
+                        <p class="mt-3 text-slate-600 text-sm md:text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Explicabo ab molestias fugit at quaerat fuga recusandae magni culpa consequatur adipisci,
                             expedita impedit voluptatem nulla cumque labore iure dignissimos? Aliquid, corporis?</p>
                         <div class="mt-8">
                             <button type="button"
-                                class="rounded-md py-2 px-4 bg-slate-100 border border-gray-600 text-gray-600  shadow text-lg hover:shadow-lg hover:bg-gray-600 hover:text-white transition-all ease-in-out  mr-4">
-                                <span class="material-icons align-middle mr-1">
+                                class="rounded-md  py-2 px-4 bg-slate-100 border border-gray-600 text-gray-600  shadow text-xs md:text-lg hover:shadow-lg hover:bg-gray-600 hover:text-white transition-all ease-in-out mr-1 md:mr-4">
+                                <span class="material-icons align-middle mr-1 text-sm md:text-lg">
                                     people
                                 </span>Meet Us</button>
                             <button type="button"
-                                class="rounded-md py-2 px-4 bg-slate-100 border border-gray-600 text-gray-600  shadow text-lg hover:shadow-lg hover:bg-gray-600 hover:text-white transition-all ease-in-out">
-                                <span class="material-icons align-middle mr-1">
+                                class="rounded-md  py-2 px-4 bg-slate-100 border border-gray-600 text-gray-600  shadow text-xs md:text-lg hover:shadow-lg hover:bg-gray-600 hover:text-white transition-all ease-in-out">
+                                <span class="material-icons align-middle mr-1 text-sm md:text-lg">
                                     lightbulb
                                 </span>Learn More</button>
                         </div>
@@ -1006,23 +1010,24 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="relative py-32 bg-gray-50 z-10">
+            <div class="bg-slate-100 w-8/12 absolute bottom-0 right-0 top-16 rounded-tl-lg -z-10">
 
             </div>
-        </section>
-        <!-- Testimonials -->
-        <section class="container relative py-36 bg-gray-50 z-10">
-            <div class="bg-slate-100 w-8/12 absolute bottom-0 right-0 top-16 rounded-tl-lg -z-10"></div>
-            <div class="w-8/12 mx-auto">
-                <div class="mb-20">
-                    <p class="text-sm font-bold uppercase text-slate-500 mb-1 font-pt-sans">Testimonials</p>
-                    <h2 class="text-3xl font-bold text-slate-600 w-5/12 font-Merri">What Our Customers Are Saying!</h2>
+            <div class="w-8/12 lg:w-10/12 xl:w-8/12 mx-auto">
+                <div class="mb-10 md:mb-20">
+                    <p class="text-xs md:text-sm font-bold uppercase text-slate-500 mb-1 font-pt-sans">Testimonials</p>
+                    <h2 class="text-xl md:text-3xl lg:text-4xl font-bold text-slate-600 w-full lg:w-5/12 font-Merri">What Our Customers Are Saying!</h2>
                 </div>
 
-                <div class="flex">
-                    <div class="w-1/2">
-                        <div class="relative h-72 w-10/12 mb-6">
-                            <div class="dot-pattern opacity-30 h-44 w-32 absolute -top-16 -left-16 -z-10"></div>
-                            <div class="dot-pattern opacity-30 h-44 w-32 absolute -bottom-16 -right-16 -z-10"></div>
+                <div class="flex flex-col lg:flex-row">
+                    <div class="w-full lg:w-1/2 mb-6 lg:mb-0">
+                        <div class="relative h-72 w-full md:w-10/12 mb-6">
+                            <div class="dot-pattern opacity-30 h-44 w-32 absolute -top-12 -left-12 md:-top-16 md:-left-16 -z-10"></div>
+                            <div class="dot-pattern opacity-30 h-44 w-32 absolute -bottom-12 -right-12 md:-bottom-16 md:-right-16 -z-10"></div>
                             <div class="absolute z-10 -top-6 -right-6">
                                 <div
                                     class="bg-purple-600 flex h-16 w-16 items-center justify-center rounded-full shadow-xl">
@@ -1046,214 +1051,371 @@
                                 <span class="material-icons align-middle">
                                     keyboard_arrow_right
                                 </span>
+                            </button>
                         </div>
                     </div>
-                    <div class="w-1/2 text-slate-600">
-                        <p class="capitalize font-semibold text-2xl mb-3 font-pt-sans">Help us improve our community.
+                    <div class="w-full lg:w-1/2 text-slate-600">
+                        <p class="capitalize font-semibold text-xl md:text-2xl mb-3 font-pt-sans">Help us improve our community.
                         </p>
-                        <p class="font-pt-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <p class="font-pt-sans text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Quisquam
                             quae, voluptas, quod, voluptates quibusdam voluptatibus quidem quos quia voluptatum
                             accusantium quas. Quisquam, quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. </p>
                         <div class="mt-4 font-pt-sans">
-                            <p class="text-slate-500 font-bold text-lg ">John Doe</p>
-                            <p class="text-slate-500">Lead Marketing Manager</p>
+                            <p class="text-slate-500 font-bold text-lg">- John Doe</p>
+                            <p class="text-slate-500 text-sm">Lead Marketing Manager</p>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </section>
-        <!-- Contact us -->
-        <section class="container py-36 bg-purple-100">
-            <div class="w-9/12 mx-auto">
-                <div class="shadow-lg rounded-xl relative">
-                    <img src="./src/assets/img/hero-imgs/hero-img2.jpg" alt="contact hero image" class="w-full
-                    h-[46rem] rounded-xl object-cover">
-                    <div class="absolute inset-0 bg-black/70 h-full rounded-xl"></div>
-                    <div class="absolute top-24 left-8 right-8">
-                        <div class="flex items-end">
-                        <div class="w-1/2 text-slate-100">
-                            <div class="mb-5">
-                                <h4 class="font-bold text-4xl font-Merri mb5">Find Us</h4>
-                            </div>
-                            <div class="flex gap-6">
-                                <div class="border-r-2">
-                                    <p class="font-bold text-xl font-pt-sans">
-                                        <!-- <span class="material-icons align-middle text-xl mr-0.5">
-                                        location_on
-                                    </span> -->
-                                    California</p>
-                                    
-                                    <p class="text-sm font-pt-sans">1234 Main Street, Anytown, USA</p>
-                                  
-                                    <p class="text-sm font-pt-sans">  
-                                        <!-- <span class="material-icons align-middle text-sm mr-0.5">
-                                        phone
-                                    </span> -->
-                                    +1 234 567 8900</p>
-                                </div>
-                                
-                                <div class="border-r-2">
-                                    <p class="font-bold text-xl font-pt-sans">
-                                        <!-- <span class="material-icons align-middle text-xl mr-0.5">
-                                        location_on
-                                    </span> -->
-                                    New Delhi</p>
-                                    
-                                    <p class="text-sm font-pt-sans">1234 Main Street, Anytown, India</p>
-                                  
-                                    <p class="text-sm font-pt-sans">  
-                                        <!-- <span class="material-icons align-middle text-sm mr-0.5">
-                                        phone
-                                    </span> -->
-                                    +1 234 567 8900</p>
-                                </div>
-                                
-                                <div class="">
-                                    <p class="font-bold text-xl font-pt-sans">
-                                        <!-- <span class="material-icons align-middle text-xl mr-0.5">
-                                        location_on
-                                    </span> -->
-                                    New York</p>
-                                    
-                                    <p class="text-sm font-pt-sans">1234 Main Street, Anytown, USA</p>
-                                  
-                                    <p class="text-sm font-pt-sans"> 
-                                         <!-- <span class="material-icons align-middle text-sm mr-0.5">
-                                        phone
-                                    </span> -->
-                                    +1 234 567 8900</p>
-                                </div>
-                                
-                    
-                            </div>
-                        </div>
-                        <div class="w-1/2">
-                            <div class="bg-white max-w-lg rounded-md shadow p-6 space-y-6 ml-auto">
-                                <div>
-                                    <h4 class="text-4xl font-bold text-slate-600 font-Merri capitalize mb-4">Get in touch</h4>
-                                    <p class="text-sm text-slate-500 font-pt-sans capitalize mb-2">Need help or have some feedback for us?</p>
-                                    <p class="text-sm text-slate-500 font-pt-sans capitalize">Fill out the form below to contact our team </p>
-                                </div>
 
-                                <form action="" class="space-y-2">
-                                    <div class="flex gap-3">
-                                        <div>
-                                        <label for="first-name" class="text-sm text-slate-500 font-pt-sans">First Name</label>
-                                        <input type="text" name="first-name" placeholder="John" id="first-name" class="border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600 w-full">
+        <!-- Contact us -->
+        <section class="lg:py-32 bg-purple-100">
+            <div class="w-full lg:w-11/12 xl:w-9/12 mx-auto">
+                <div class="shadow-lg lg:rounded-xl relative py-12 px-12 bg-cover bg-center z-10" style="background-image: url('./src/assets/img/hero-imgs/hero-img2.jpg');">
+                    <!-- <img src="" alt="contact hero image" class="w-full
+                    h-[46rem] rounded-xl object-cover"> -->
+                    <div class="absolute inset-0 bg-black/70 h-full lg:rounded-xl -z-10"></div>
+                    <!-- <div class="absolute top-24 left-8 right-8"> -->
+                        <div class="flex flex-col-reverse gap-12 lg:flex-row lg:gap-0 items-end">
+                            <div class="w-full lg:w-1/2 text-slate-100">
+                                <div class="mb-5">
+                                    <h4 class="font-bold text-2xl md:text-3xl lg:text-4xl font-Merri mb5">Find Us</h4>
+                                </div>
+                                <div class="flex flex-col md:flex-row gap-6">
+                                    <div class="md:border-r-2 md:px-2 border-b-2 md:border-b-0 pb-2 md:pb-0">
+                                        <p class="font-bold text-sm md:text-xl font-pt-sans">
+                                            <span class="material-icons lg:hidden align-middle text-sm mr-0.5">
+                                        location_on
+                                    </span>
+                                            California
+                                        </p>
+
+                                        <p class="text-xs md:text-sm font-pt-sans ml-5 lg:ml-0">1234 Main Street, Anytown, USA</p>
+
+                                        <p class="text-xs md:text-sm font-pt-sans">
+                                            <span class="material-icons lg:hidden align-middle text-xs mr-0.5">
+                                        phone
+                                    </span>
+                                            +1 234 567 8900
+                                        </p>
                                     </div>
-                                        <div>
-                                        <label for="last-name" class="text-sm text-slate-500 font-pt-sans">Last Name</label>
-                                        <input type="text" name="last-name" placeholder="Doe" id="last-name" class="border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600 w-full">
+
+                                    <div class="md:border-r-2 md:px-2 border-b-2 md:border-b-0 pb-2 md:pb-0">
+                                        <p class="font-bold text-sm md:text-xl font-pt-sans">
+                                            <span class="material-icons lg:hidden align-middle text-sm mr-0.5">
+                                        location_on
+                                    </span>
+                                            New Delhi
+                                        </p>
+
+                                        <p class="text-xs md:text-sm font-pt-sans ml-5 lg:ml-0">1234 Main Street, Anytown, India</p>
+
+                                        <p class="text-xs md:text-sm font-pt-sans">
+                                            <span class="material-icons lg:hidden align-middle text-xs mr-0.5">
+                                        phone
+                                    </span>
+                                            +1 234 567 8900
+                                        </p>
                                     </div>
+
+                                    <div class="">
+                                        <p class="font-bold text-sm md:text-xl font-pt-sans">
+                                            <span class="material-icons lg:hidden align-middle text-sm mr-0.5">
+                                        location_on
+                                    </span>
+                                            New York
+                                        </p>
+
+                                        <p class="text-xs md:text-sm font-pt-sans ml-5 lg:ml-0">1234 Main Street, Anytown, USA</p>
+
+                                        <p class="text-xs md:text-sm font-pt-sans">
+                                            <span class="material-icons lg:hidden align-middle text-xs mr-0.5">
+                                        phone
+                                    </span>
+                                            +1 234 567 8900
+                                        </p>
                                     </div>
-                                    <div class="flex flex-col space-y-1">
-                                        <label for="email" class="text-sm text-slate-500 font-pt-sans">Email</label>
-                                        <input type="email" name="email" placeholder="johndoe@email.com" id="email" class="border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600">
+
+                                </div>
+                            </div>
+                            <div class="w-full lg:w-1/2">
+                                <div class="bg-white max-w-lg rounded-md shadow p-6 space-y-6 ml-auto">
+                                    <div>
+                                        <h4 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-600 font-Merri capitalize mb-4">Get in
+                                            touch</h4>
+                                        <p class="text-xs   text-slate-500 font-pt-sans capitalize mb-2">Need help or have
+                                            some feedback for us?</p>
+                                        <p class="text-xs md:text-sm text-slate-500 font-pt-sans capitalize">Fill out the form
+                                            below to contact our team </p>
                                     </div>
-                                    <div class="flex flex-col space-y-1">
-                                        <label for="message" class="text-sm text-slate-500 font-pt-sans">Message</label>
-                                        <textarea name="message" placeholder="Great job! I just have question..." id="message" cols="30" rows="4" class="border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600"></textarea>
-                                    </div>
-                                    <button type="submit" class="bg-purple-600 text-white rounded-md py-2 px-4 hover:bg-purple-700">
-                        
-                                        Send
-                                        <span class="material-icons align-baseline -rotate-45 ml-1 text-sm">send</span>
-                                    </button>
-                                </form>
+
+                                    <form action="" class="space-y-2">
+                                        <div class="flex flex-col lg:flex-row gap-3">
+                                            <div>
+                                                <label for="first-name"
+                                                    class="text-xs md:text-sm text-slate-500 font-pt-sans">First Name</label>
+                                                <input type="text" name="first-name" placeholder="John" id="first-name"
+                                                    class="text-sm md:text-lg border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600 w-full">
+                                            </div>
+                                            <div>
+                                                <label for="last-name" class="text-xs md:text-sm text-slate-500 font-pt-sans">Last
+                                                    Name</label>
+                                                <input type="text" name="last-name" placeholder="Doe" id="last-name"
+                                                    class="text-sm md:text-lg border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600 w-full">
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col space-y-1">
+                                            <label for="email" class="text-xs md:text-sm text-slate-500 font-pt-sans">Email</label>
+                                            <input type="email" name="email" placeholder="johndoe@email.com" id="email"
+                                                class="text-sm md:text-lg border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600">
+                                        </div>
+                                        <div class="flex flex-col space-y-1">
+                                            <label for="message"
+                                                class="text-xs md:text-sm text-slate-500 font-pt-sans">Message</label>
+                                            <textarea name="message" placeholder="Great job! I just have question..."
+                                                id="message" cols="30" rows="4"
+                                                class="text-sm md:text-lg border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600"></textarea>
+                                        </div>
+                                        <button type="submit"
+                                            class="text-sm md:text-lg w-full bg-purple-600 text-white rounded-md py-2 px-4 hover:bg-purple-700">
+
+                                            Send
+                                            <span
+                                                class="material-icons align-baseline -rotate-45 ml-1 text-sm">send</span>
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
         </section>
         <!-- Feature -->
-        <section class="container py-36 bg-slate-100">
-            <div class="w-8/12 mx-auto">
+        <section class="py-32 bg-slate-100">
+            <div class="w-8/12 lg:w-10/12 xl:w-8/12 mx-auto">
                 <div class="text-center text-slate-600 mb-2">
-                    <h4 class="font-bold text-4xl font-Merri mb-5">Our Features</h4>
-                    <p class="text-sm font-pt-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                    <h4 class="font-bold text-2xl md:text-3xl lg:text-4xl font-Merri mb-5">Our Features</h4>
+                    <p class="text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                        quod.</p>
                 </div>
-                <div class="grid grid-cols-3 gap-16">
-                    <div class="p-4 rounded-md border-2 hover:bg-white hover:shadow-lg mt-5">
-                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md shadow">
-                            <!-- <span class="material-icons align-middle text-4xl"></span><br> -->
-                            <span class="material-icons align-middle text-4xl text-purple-600">chat</span>
-                            <!-- <svg aria-hidden="true" fill="none" stroke="#6c25be" stroke-width="1.5" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg> -->
-                            
-                            </button>
-                            <p class="text-bold text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Unlimited Chats</p>
-                            <p class="text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-16">
+                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5">
+                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md">
+                            <span class="material-icons align-middle text-2xl md:text-4xl text-purple-600">chat</span>
+                         
+                        </button>
+                        <p class="text-bold text-sm md:text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Unlimited Chats</p>
+                        <p class="text-xs md:text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Quisquam, quod.</p>
                     </div>
-                    <div class="p-4 rounded-md border-2 hover:bg-white hover:shadow-lg mt-5">
-                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md shadow">
-                            <!-- <span class="material-icons align-middle text-4xl"></span><br> -->
-                            <!-- <svg aria-hidden="true" fill="none" stroke="#6c25be" stroke-width="1.5" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg> -->
-                            <span class="material-icons align-middle text-4xl text-purple-600">groups</span>
-                            
-                            </button>
-                            <p class="text-bold text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Multiple Agent</p>
-                            <p class="text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5">
+                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md">
+                         
+                            <span class="material-icons align-middle text-2xl md:text-4xl text-purple-600">groups</span>
+
+                        </button>
+                        <p class="text-bold text-sm md:text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Multiple Agent</p>
+                        <p class="text-xs md:text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Quisquam, quod.</p>
                     </div>
-                    <div class="p-4 rounded-md border-2 hover:bg-white hover:shadow-lg mt-5">
-                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md shadow">
-                            <!-- <span class="material-icons align-middle text-4xl"></span><br> -->
-                            <span class="material-icons align-middle text-4xl text-purple-600">schema</span>
-                            <!-- <svg aria-hidden="true" fill="none" stroke="#6c25be" stroke-width="1.5" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg> -->
-                            
-                            </button>
-                            <p class="text-bold text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Departments</p>
-                            <p class="text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5">
+                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md">
+                            <span class="material-icons align-middle text-2xl md:text-4xl text-purple-600">schema</span>
+                        </button>
+                        <p class="text-bold text-sm md:text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Departments</p>
+                        <p class="text-xs md:text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Quisquam, quod.</p>
                     </div>
-                    <div class="p-4 rounded-md border-2 hover:bg-white hover:shadow-lg mt-5">
-                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md shadow">
-                            <!-- <span class="material-icons align-middle text-4xl"></span><br> -->
-                            <span class="material-icons align-middle text-4xl text-purple-600">speed</span>
-                            <!-- <svg aria-hidden="true" fill="none" stroke="#6c25be" stroke-width="1.5" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg> -->
-                            
-                            </button>
-                            <p class="text-bold text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Super Fast</p>
-                            <p class="text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5">
+                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md">
+                            <span class="material-icons align-middle text-2xl md:text-4xl text-purple-600">speed</span>
+                         
+
+                        </button>
+                        <p class="text-bold text-sm md:text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Super Fast</p>
+                        <p class="text-xs md:text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Quisquam, quod.</p>
                     </div>
-                    <div class="p-4 rounded-md border-2 hover:bg-white hover:shadow-lg mt-5">
-                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md shadow">
-                            <!-- <span class="material-icons align-middle text-4xl"></span><br> -->
-                            <span class="material-icons align-middle text-4xl text-purple-600">assignment</span>
-                            <!-- <svg aria-hidden="true" fill="none" stroke="#6c25be" stroke-width="1.5" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg> -->
-                            
-                            </button>
-                            <p class="text-bold text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Detailed Log</p>
-                            <p class="text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5">
+                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md">
+                            <span class="material-icons align-middle text-2xl md:text-4xl text-purple-600">assignment</span>
+                         
+
+                        </button>
+                        <p class="text-bold text-sm md:text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Detailed Log</p>
+                        <p class="text-xs md:text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Quisquam, quod.</p>
                     </div>
-                    <div class="p-4 rounded-md border-2 hover:bg-white hover:shadow-lg mt-5">
-                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md shadow">
-                            <!-- <span class="material-icons align-middle text-4xl"></span><br> -->
-                            <span class="material-icons align-middle text-4xl text-purple-600">insights</span>
-                            <!-- <svg aria-hidden="true" fill="none" stroke="#6c25be" stroke-width="1.5" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg> -->
-                            
-                            </button>
-                            <p class="text-bold text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Analytics</p>
-                            <p class="text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5">
+                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md">
+                            <span class="material-icons align-middle text-2xl md:text-4xl text-purple-600">insights</span>
+                        </button>
+                        <p class="text-bold text-sm md:text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Analytics</p>
+                        <p class="text-xs md:text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Quisquam, quod.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Loading Section -->
+        <section class="py-32 bg-slate-200">
+        <div class="w-8/12 lg:w-10/12 xl:w-8/12 mx-auto">
+            <div class="text-center text-slate-600 mb-10">
+                <h4 class="font-bold text-3xl lg:text-4xl font-Merri mb-2">Blog Posts</h4>
+                <p class="text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                    quod.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse">
+                    <div class="rounded-full bg-slate-400 h-24 w-24"></div>
+                    <div class="rounded-full bg-slate-400 h-4 w-24"></div>
+
+                    <div class="space-y-2">
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-34"></div>
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-44"></div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-54"></div>
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-14"></div>
+                    </div>
+                </div>
+                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse">
+                    <div class="rounded-full bg-slate-400 h-24 w-24"></div>
+                    <div class="rounded-full bg-slate-400 h-4 w-24"></div>
+
+                    <div class="space-y-2">
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-34"></div>
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-44"></div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-54"></div>
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-14"></div>
+                    </div>
+                </div>
+                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse">
+                    <div class="rounded-full bg-slate-400 h-24 w-24"></div>
+                    <div class="rounded-full bg-slate-400 h-4 w-24"></div>
+
+                    <div class="space-y-2">
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-34"></div>
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-44"></div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-54"></div>
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-14"></div>
+                    </div>
+                </div>
+                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse">
+                    <div class="rounded-md bg-slate-400 h-32 w-34"></div>
+                    <div class="rounded-full bg-slate-400 h-10 w-10"></div>
+                    <div class="rounded-full bg-slate-400 h-4 w-25"></div>
+
+                    <div class="space-y-2">
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-34"></div>
+                        <!-- <div class="shadow-sm rounded-full bg-slate-400 h-4 w-44"></div> -->
+                    </div>
+                    <div class="flex gap-2">
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-12"></div>
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-14"></div>
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-24"></div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse">
+                    <div class="rounded-md bg-slate-400 h-32 w-34"></div>
+                    <div class="rounded-full bg-slate-400 h-10 w-10"></div>
+                    <div class="rounded-full bg-slate-400 h-4 w-25"></div>
+
+                    <div class="space-y-2">
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-34"></div>
+                        <!-- <div class="shadow-sm rounded-full bg-slate-400 h-4 w-44"></div> -->
+                    </div>
+                    <div class="flex gap-2">
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-12"></div>
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-14"></div>
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-24"></div>
+                    </div>
+                </div>
+                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse">
+                    <div class="rounded-md bg-slate-400 h-32 w-34"></div>
+                    <div class="rounded-full bg-slate-400 h-10 w-10"></div>
+                    <div class="rounded-full bg-slate-400 h-4 w-25"></div>
+
+                    <div class="space-y-2">
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-34"></div>
+                        <!-- <div class="shadow-sm rounded-full bg-slate-400 h-4 w-44"></div> -->
+                    </div>
+                    <div class="flex gap-2">
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-12"></div>
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-14"></div>
+                        <div class="shadow-sm rounded-full bg-slate-400 h-4 w-24"></div>
                     </div>
                 </div>
             </div>
+            
+            <div class="flex items-center justify-center">
+                <button
+                        class="py-2 px-6 border-2 border-slate-400 lg:bg-slate-200 font-pt-sans rounded-md mt-10 lg:text-slate-600 text-sm lg:text-xl text-slate-100 bg-purple-700 lg:hover:bg-purple-700 hover:text-white"
+                        type="submit">📖Read More</button>
+            </div>
+            
+        </div>
         </section>
-        
+            <!-- Footer -->
+        <footer class="py-5 bg-slate-600">
+            <div class="w-8/12 lg:w-10/12 xl:w-8/12 mx-auto">
+                <div class="flex flex-wrap justify-between py-12 font-pt-sans gap-10 lg:gap-0">
+                    <div>
+                        <p class="font-bold uppercase mb-2 text-slate-300 font-Merri">Company</p>
+                        <ul>
+                            <li><a href="#" class="text-slate-300">About Us</a></li>
+                            <li><a href="#" class="text-slate-300">Contact Us</a></li>
+                            <li><a href="#" class="text-slate-300">Support</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold uppercase mb-2 text-slate-300 font-Merri">Business</p>
+                        <ul>
+                            <li><a href="#" class="text-slate-300">Claim Business</a></li>
+                            <li><a href="#" class="text-slate-300">Advertise</a></li>
+                            <li><a href="#" class="text-slate-300">Sponsor</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold uppercase mb-2 text-slate-300 font-Merri">Learn More</p>
+                        <ul>
+                            <li><a href="#" class="text-slate-300">FAQ</a></li>
+                            <li><a href="#" class="text-slate-300">Get Help</a></li>
+                            <li><a href="#" class="text-slate-300">Code of Conduct</a></li>
+                            <li><a href="#" class="text-slate-300">Privacy Policy</a></li>
+                            <li><a href="#" class="text-slate-300">Terms And Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold uppercase mb-2 text-slate-300 font-Merri">Follow Us</p>
+                        <ul class="flex gap-2">
+                            <li><a href="#" class="text-slate-300"><i class="fab fa-facebook text-2xl"></i></a></li>
+                            <li><a href="#" class="text-slate-300"><i class="fab fa-instagram text-2xl"></i></a></li>
+                            <li><a href="#" class="text-slate-300"><i class="fab fa-twitter text-2xl"></i></a></li>
+                            <li><a href="#" class="text-slate-300"><i class="fab fa-telegram text-2xl"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-center text-slate-300 mt-10 font-pt-sans"><a href="#footer" class="">Travel & Tour ©
+                            2021 All Rights Reserved</a></p>
+                </div>
+            </div>
+        </footer>
     </main>
 </body>
-
 </html>
