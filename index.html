@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light dark transition-all">
 
 <head>
     <meta charset="UTF-8">
@@ -33,7 +33,7 @@
                 </div>
                 <div>
                     <button
-                        class="py-1 px-2 rounded-md border-2 outline-transparent text-white border-white bg-transparent hover:bg-green-600 hover:text-white hover:border-green-600 transition-all text-sm lg:text-lg">
+                        class="py-1 px-2 rounded-md border-2 outline-transparent text-white border-white bg-transparent hover:bg-green-600 hover:text-white hover:border-green-600 transition-all text-sm lg:text-lg dark:border-slate-300 dark:text-slate-300">
                         <!-- <span
                         class="material-icons align-middle items-center justify-center text-white text-sm lg:text-lg">
                         airplane_ticket
@@ -43,7 +43,7 @@
                 </div>
                 <div class="space-x-4">
                     <button
-                        class="py-1 px-2 rounded-md border-2 outline-transparent text-white border-white bg-transparent hover:bg-green-700 hover:text-white hover:border-green-700 transition-all text-sm lg:text-lg">
+                        class="py-1 px-2 rounded-md border-2 outline-transparent text-white border-white bg-transparent hover:bg-green-700 hover:text-white hover:border-green-700 transition-all text-sm lg:text-lg dark:border-slate-300 dark:text-slate-300">
                         <!-- <span
                             class="material-icons align-middle items-center justify-center mr-1 text-sm">
                             login
@@ -51,38 +51,56 @@
                         Sign In
                     </button>
                     <button
-                        class="text-sm lg:text-lg py-1 px-2 rounded-md border-2 outline-transparent text-white border-white bg-green-600 hover:bg-green-700 hover:text-white hover:border-green-700 transition-all">
+                        class="text-sm lg:text-lg py-1 px-2 rounded-md border-2 outline-transparent text-white border-white bg-green-600 hover:bg-green-700 hover:text-white hover:border-green-700 transition-all dark:border-slate-300 dark:text-slate-300">
                         Sign Up
                     </button>
                 </div>
+                
             </div>
         </nav>
     </div>
     <main>
+
+        <!-- Scroll to top -->
+        <button class="scrollToTop hidden p-1"> 
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+              </svg>
+              
+                           
+        </button>
+
+        <div class="block fixed right-[3.3rem] bottom-20 lg:bottom-28 lg:right-[4.8rem] z-50">
+            <label class="switch relative block h-5">
+                <input type="checkbox" class="theme-switch hidden peer checked:bg-slate-900"/>
+                <span class="bg-slate-400 shadow-inner peer-checked:bg-gray-700 peer-checked:before:rotate-90 transition-all absolute inset-0 cursor-pointer rounded-full before:shadow-sm before:shadow-slate-800 before:content-['☀️'] before:flex before:justify-center before:items-center before:absolute before:w-7 before:h-7 md:before:h-7 md:before:w-7 before:bg-slate-100 before:text-yellow-500 dark:bg-slate-800 before:rounded-full before:inset-1 peer-checked:before:bg-slate-900 dark:peer-checked:before:bg-slate-900 peer-checked:before:content-['🌙'] before:transition-all"></span>
+            </label>
+        </div>
+
         <!-- Hero Banner -->
-        <section class="heroHeader relative h-screen bg-cover bg-center" style="background-image: url('src/assets/img/hero-imgs/hero-img1.jpg');">
+        <section class="dark:border-t dark:border-t-slate-500 heroHeader relative h-screen bg-cover bg-center" style="background-image: url('src/assets/img/hero-imgs/hero-img1.jpg');">
                 <!-- <img src="src/assets/img/hero-imgs/hero-img1.jpg" alt="Traveling man and woman" class="h-full w-full object-cover"> -->
                 <div class="absolute inset-0 bg-black/75"></div>
                 <div class="absolute inset-0 h-full w-full">
                     <div class="flex min-h-full w-full items-center justify-center">
                         <div class="space-y-6">
                             <div class="text-center">
-                                <h1 class="text-xl md:text-4xl lg:text-5xl font-bold text-white capitalize mb-4 font-Merri">Discover places you
+                                <h1 class="text-xl md:text-4xl lg:text-5xl font-bold text-white capitalize mb-4 font-Merri dark:text-slate-300">Discover places you
                                     love.</h1>
-                                <p class="text-sm md:text-lg text-white w-10/12 mx-auto">Find your perfect trip, designed by insiders who know and love their cities.</p>
+                                <p class="text-sm md:text-lg text-white w-10/12 mx-auto dark:text-slate-300">Find your perfect trip, designed by insiders who know and love their cities.</p>
                             </div>
                             <div class="flex flex-col lg:flex-row gap-5 items-center justify-center">
                                 <div>
                                     <input type="text" placeholder="Location"
-                                        class="rounded-md w-60 md:w-80 bg-white text-gray-600 py-2 px-4 lg:py-3 ;lg:px-6 focus:outline">
+                                        class="rounded-md w-60 md:w-80 bg-white text-gray-600 py-2 px-4 lg:py-3 ;lg:px-6 focus:outline dark:bg-slate-500 dark:text-slate-200">
                                 </div>
                                 <div>
                                     <input type="text" placeholder="I'm Looking For..."
-                                        class="rounded-md w-60 md:w-80 bg-white text-gray-600 py-2 px-4 lg:py-3 lg:px-6 focus:outline">
+                                        class="rounded-md w-60 md:w-80 bg-white text-gray-600 py-2 px-4 lg:py-3 lg:px-6 focus:outline dark:bg-slate-500 dark:text-slate-200">
                                 </div>
                                 <div>
                                     <button type="button"
-                                        class=" text-gray-100 py-2 px-4 lg:py-2.5 px-6 rounded-md border text-whiteoutline-2 outline-transparent border-none bg-green-600 hover:bg-green-700 hover:text-gray-200 transition-all">
+                                        class=" text-gray-100 py-2 lg:py-2.5 px-6 rounded-md border text-whiteoutline-2 outline-transparent border-none bg-green-600 hover:bg-green-700 hover:text-gray-200 transition-all  dark:text-slate-300">
                                         <span class="material-icons align-middle mr-1 ">
                                             search
                                         </span>Search</button>
@@ -91,28 +109,28 @@
 
                             <div class="w-9/12 lg:w-full mx-auto">
                                 <ul class="flex gap-4 lg:gap-8 justify-center text-sm text-white font-Merri flex-wrap">
-                                    <li><a href="#" class="p-2  hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2">
+                                    <li><a href="#" class="p-2  hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2 dark:text-slate-300">
                                             <span class="material-icons align-middle mr-1">
                                                 restaurant_menu
                                             </span>
                                             Restaurants</a></li>
-                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2"><span
+                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2 dark:text-slate-300"><span
                                                 class="material-icons align-middle mr-1">local_cafe</span>Café</a>
                                     </li>
-                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2">
+                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2 dark:text-slate-300">
                                             <span class="material-icons align-middle mr-1">
                                                 fitness_center
                                             </span>
                                             Gym</a></li>
-                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2"> <span
+                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2 dark:text-slate-300"> <span
                                                 class="material-icons align-middle mr-1">
                                                 medication
                                             </span>Hospital</a></li>
-                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2"> <span
+                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2 dark:text-slate-300"> <span
                                                 class="material-icons align-middle mr-1">
                                                 school
                                             </span>School</a></li>
-                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2"> <span
+                                    <li><a href="#" class="p-2 hover:text-white hover:bg-green-600 rounded md:px-3 md:py-2 dark:text-slate-300"> <span
                                                 class="material-icons align-middle mr-1">
                                                 shopping_cart
                                             </span>Shopping</a></li>
@@ -124,27 +142,27 @@
         </section>
 
         <!-- Popular Places -->
-        <section class="bg-slate-100 py-32">
+        <section class="dark:border-t dark:border-t-slate-500 bg-slate-100 py-32 dark:bg-slate-800 dark:text-slate-300">
                     <div class="w-8/12 md:w-10/12 lg:w-8/12 mx-auto">
                         <div class="text-center mb-12">
-                            <h3 class="text-2xl lg:text-4xl font-bold font-Merri text-gray-600 mb-3">Popular Places</h3>
-                            <p class="text-gray-600 text-sm">Discover Most Searched Places</p>
+                            <h3 class="text-2xl lg:text-4xl font-bold font-Merri text-gray-600 mb-3 dark:text-slate-300">Popular Places</h3>
+                            <p class="text-gray-600 text-sm dark:text-slate-300">Discover Most Searched Places</p>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto">
                             <!-- Card One -->
-                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
+                            <div class="bg-white dark:bg-slate-600 dark:text-slate-300 rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
                                     <img src="src/assets/img/img1.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2 relative">
                                     <div>
-                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Grand Hotel</h3>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600  dark:text-slate-300">The Grand Hotel</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300 py-1"> <span
                                                 class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Japan</p>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
                                     <div class="flex items-center md:text-sm font-pt-sans">
@@ -184,19 +202,19 @@
                                 </div>
                             </div>
                             <!-- Card Two -->
-                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
+                            <div class="bg-white dark:bg-slate-600 dark:text-slate-300 rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
                                     <img src="src/assets/img/img2.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2">
                                     <div>
-                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Tokyo Temple</h3>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600  dark:text-slate-300">The Tokyo Temple</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300 py-1 dark:text-slate-300"> <span
                                                 class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, China</p>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
                                     <div class="flex items-center md:text-sm font-pt-sans">
@@ -231,20 +249,20 @@
                                 </div>
                             </div>
                             <!-- Card Three -->
-                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
+                            <div class="bg-white dark:bg-slate-600 dark:text-slate-300 rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
                                     <img src="src/assets/img/img3.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2 relative">
                                     <div>
-                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">St. Basil's Cathedral
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600  dark:text-slate-300">St. Basil's Cathedral
                                         </h3>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300 py-1 dark:text-slate-300"> <span
                                                 class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Russia</p>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
                                     <div class="flex items-center md:text-sm font-pt-sans">
@@ -282,19 +300,19 @@
                                 </div>
                             </div>
                             <!-- Card Four -->
-                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
+                            <div class="bg-white dark:bg-slate-600 dark:text-slate-300 rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
                                     <img src="src/assets/img/img4.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2">
                                     <div>
-                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Great Hotel</h3>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600  dark:text-slate-300">The Great Hotel</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300 py-1 dark:text-slate-300"> <span
                                                 class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Africa</p>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
                                     <div class="flex items-center md:text-sm font-pt-sans">
@@ -329,19 +347,19 @@
                                 </div>
                             </div>
                             <!-- Card 5 -->
-                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
+                            <div class="bg-white dark:bg-slate-600 dark:text-slate-300 rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
                                     <img src="src/assets/img/img5.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2">
                                     <div>
-                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Beautiful Hotel</h3>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600  dark:text-slate-300">The Beautiful Hotel</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300 py-1 dark:text-slate-300"> <span
                                                 class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Florida</p>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
                                     <div class="flex items-center md:text-sm font-pt-sans">
@@ -376,19 +394,19 @@
                                 </div>
                             </div>
                             <!-- Card Six -->
-                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
+                            <div class="bg-white dark:bg-slate-600 dark:text-slate-300 rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
                                     <img src="src/assets/img/img6.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2 relative">
                                     <div>
-                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Big Ship</h3>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600  dark:text-slate-300">The Big Ship</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300 py-1 dark:text-slate-300"> <span
                                                 class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Africa</p>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
                                     <div class="flex items-center md:text-sm font-pt-sans">
@@ -426,19 +444,19 @@
                                 </div>
                             </div>
                             <!-- Card Seven -->
-                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
+                            <div class="bg-white dark:bg-slate-600 dark:text-slate-300 rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
                                     <img src="src/assets/img/img7.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2">
                                     <div>
-                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Lodge</h3>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600  dark:text-slate-300">The Lodge</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300 py-1 dark:text-slate-300"> <span
                                                 class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Dubai</p>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
                                     <div class="flex items-center md:text-sm font-pt-sans">
@@ -473,19 +491,19 @@
                                 </div>
                             </div>
                             <!-- Card Eight -->
-                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
+                            <div class="bg-white dark:bg-slate-600 dark:text-slate-300 rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
                                     <img src="src/assets/img/img8.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2">
                                     <div>
-                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The White Hotel</h3>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600  dark:text-slate-300">The White Hotel</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300 py-1 dark:text-slate-300"> <span
                                                 class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Africa</p>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
                                     <div class="flex items-center md:text-sm font-pt-sans">
@@ -520,19 +538,19 @@
                                 </div>
                             </div>
                             <!-- Card Nine -->
-                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
+                            <div class="bg-white dark:bg-slate-600 dark:text-slate-300 rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
                                     <img src="src/assets/img/img9.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2">
                                     <div>
-                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Palace Hotel</h3>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600  dark:text-slate-300">The Palace Hotel</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300 py-1 dark:text-slate-300"> <span
                                                 class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, England</p>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
                                     <div class="flex items-center md:text-sm font-pt-sans">
@@ -567,19 +585,19 @@
                                 </div>
                             </div>
                             <!-- Card Ten -->
-                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
+                            <div class="bg-white dark:bg-slate-600 dark:text-slate-300 rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
                                     <img src="src/assets/img/img10.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2 relative">
                                     <div>
-                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Walk Way</h3>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600  dark:text-slate-300">The Walk Way</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300 py-1 dark:text-slate-300"> <span
                                                 class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, France</p>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
                                     <div class="flex items-center md:text-sm font-pt-sans">
@@ -616,19 +634,19 @@
                                 </div>
                             </div>
                             <!-- Card Eleven -->
-                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
+                            <div class="bg-white dark:bg-slate-600 dark:text-slate-300 rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
                                     <img src="src/assets/img/img11.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2 relative">
                                     <div>
-                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Mecca Mosque</h3>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600  dark:text-slate-300">The Mecca Mosque</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300 py-1 dark:text-slate-300"> <span
                                                 class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Saudi Arabia</p>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
                                     <div class="flex items-center md:text-sm font-pt-sans">
@@ -667,19 +685,19 @@
                                 </div>
                             </div>
                             <!-- Card Twelve -->
-                            <div class="bg-white rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
+                            <div class="bg-white dark:bg-slate-600 dark:text-slate-300 rounded-md shadow overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                                 <div class="h-48 overflow-hidden">
                                     <img src="src/assets/img/img12.jpg" alt="" class="w-full h-full object-cover">
                                 </div>
                                 <!-- Starts -->
                                 <div class="px-6 py-4 space-y-2">
                                     <div>
-                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600">The Hiking Mountain</h3>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans py-1"> <span
+                                        <h3 class=" text-sm md:text-xl font-bold font-Merri text-gray-600  dark:text-slate-300">The Hiking Mountain</h3>
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300 py-1 dark:text-slate-300"> <span
                                                 class="material-icons align-middle text-amber-500 -ml-1 text-sm">
                                                 place
                                             </span>Somewhere, Egypt</p>
-                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet
+                                        <p class="text-gray-600 text-xs md:text-sm font-pt-sans dark:text-slate-300">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quisquam, quod.</p>
                                     </div>
                                     <div class="flex items-center md:text-sm font-pt-sans">
@@ -716,81 +734,81 @@
                         </div>
                         <div class="mt-12 text-center">
                             <button type="button"
-                                class="rounded-md py-2.5 px-6 bg-green-600 text-slate-100 lg:bg-slate-100 border border-gray-500 lg:text-gray-600  shadow lg:text-lg lg:hover:shadow-lg lg:hover:bg-green-600 lg:hover:text-white transition-all ease-in-out">
+                                class="rounded-md py-2.5 px-6 bg-green-600 text-slate-100 lg:bg-slate-100 border border-gray-500 lg:text-gray-600  shadow lg:text-lg lg:hover:shadow-lg lg:hover:bg-green-600 lg:hover:text-white transition-all ease-in-out dark:bg-slate-400 dark:text-slate-200">
                                 🚀 Discover More</button>
                         </div>
                     </div>
         </section>
 
         <!-- Discover By Categories -->
-        <section class="bg-sky-50 py-32">
+        <section class="dark:border-t dark:border-t-slate-500 bg-sky-50 py-32 dark:bg-slate-800 dark:text-slate-300">
             <div class="w-9/12 mx-auto">
                 <div class="text-enter">
-                    <h3 class="text-2xl lg:text-4xl font-bold text-gray-600 text-center capitalize mb-4 font-Merri">Discover By
+                    <h3 class="text-2xl lg:text-4xl font-bold text-gray-600 text-center capitalize mb-4 font-Merri dark:text-slate-300">Discover By
                         Categories</h3>
-                    <p class="text-center text-gray-600 font-pt-sans text-sm">Discover places by categories</p>
+                    <p class="text-center text-gray-600 font-pt-sans text-sm  dark:text-slate-300">Discover places by categories</p>
                 </div>
                 <div class="py-10">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 place-items-center">
-                        <a href="#" class="p-4 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
+                        <a href="#" class="p-4 dark:bg-slate-500 dark:text-slate-300 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
                             <img src="src/assets/img/discover/coffee_tea.jpg" alt=""
                                 class="w-32 h-32 rounded-full mx-auto">
                             <div class="text-center space-y-2">
-                                <p class="text-gray-700 mb-3 text-sm font-semibold ">Coffee & Tea</p>
+                                <p class="text-gray-700 mb-3 text-sm font-semibold dark:text-slate-300">Coffee & Tea</p>
                             </div>
                         </a>
-                        <a href="#" class="p-4 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
+                        <a href="#" class="p-4 dark:bg-slate-500 dark:text-slate-300 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
                             <img src="src/assets/img/discover/entertainment.jpg" alt=""
                                 class="w-32 h-32 rounded-full mx-auto">
                             <div class="text-center space-y-2">
-                                <p class="text-gray-700 mb-3 text-sm font-semibold ">Entertainment</p>
+                                <p class="text-gray-700 mb-3 text-sm font-semibold dark:text-slate-300">Entertainment</p>
                             </div>
                         </a>
-                        <a href="#" class="p-4 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
+                        <a href="#" class="p-4 dark:bg-slate-500 dark:text-slate-300 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
                             <img src="src/assets/img/discover/health_medical.jpg" alt=""
                                 class="w-32 h-32 rounded-full mx-auto">
                             <div class="text-center space-y-2">
-                                <p class="text-gray-700 mb-3 text-sm font-semibold ">Health & Medical</p>
+                                <p class="text-gray-700 mb-3 text-sm font-semibold dark:text-slate-300">Health & Medical</p>
                             </div>
                         </a>
-                        <a href="#" class="p-4 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
+                        <a href="#" class="p-4 dark:bg-slate-500 dark:text-slate-300 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
                             <img src="src/assets/img/discover/education.jpg" alt=""
                                 class="w-32 h-32 rounded-full mx-auto">
                             <div class="text-center space-y-2">
-                                <p class="text-gray-700 mb-3 text-sm font-semibold ">Education</p>
+                                <p class="text-gray-700 mb-3 text-sm font-semibold dark:text-slate-300">Education</p>
                             </div>
                         </a>
-                        <a href="#" class="p-4 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
+                        <a href="#" class="p-4 dark:bg-slate-500 dark:text-slate-300 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
                             <img src="src/assets/img/discover/automotive.jpg" alt=""
                                 class="w-32 h-32 rounded-full mx-auto">
                             <div class="text-center space-y-2">
-                                <p class="text-gray-700 mb-3 text-sm font-semibold ">Automotive</p>
+                                <p class="text-gray-700 mb-3 text-sm font-semibold dark:text-slate-300">Automotive</p>
                             </div>
                         </a>
-                        <a href="#" class="p-4 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
+                        <a href="#" class="p-4 dark:bg-slate-500 dark:text-slate-300 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
                             <img src="src/assets/img/discover/home_service.jpg" alt=""
                                 class="w-32 h-32 rounded-full mx-auto">
                             <div class="text-center space-y-2">
-                                <p class="text-gray-700 mb-3 text-sm font-semibold ">Home Service</p>
+                                <p class="text-gray-700 mb-3 text-sm font-semibold dark:text-slate-300">Home Service</p>
                             </div>
                         </a>
-                        <a href="#" class="p-4 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
+                        <a href="#" class="p-4 dark:bg-slate-500 dark:text-slate-300 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
                             <img src="src/assets/img/discover/shopping.jpg" alt=""
                                 class="w-32 h-32 rounded-full mx-auto">
                             <div class="text-center space-y-2">
-                                <p class="text-gray-700 mb-3 text-sm font-semibold ">Shopping</p>
+                                <p class="text-gray-700 mb-3 text-sm font-semibold dark:text-slate-300">Shopping</p>
                             </div>
                         </a>
-                        <a href="#" class="p-4 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
+                        <a href="#" class="p-4 dark:bg-slate-500 dark:text-slate-300 bg-slate-50 w-60 shadow space-y-5 rounded-lg hover:shadow-lg">
                             <img src="src/assets/img/discover/hotel.jpg" alt="" class="w-32 h-32 rounded-full mx-auto">
                             <div class="text-center space-y-2">
-                                <p class="text-gray-700 mb-3 text-sm font-semibold ">Hotel & Travel</p>
+                                <p class="text-gray-700 mb-3 text-sm font-semibold dark:text-slate-300">Hotel & Travel</p>
                             </div>
                         </a>
                     </div>
                     <div class="mt-12 text-center">
                         <button type="button"
-                            class="rounded-md py-2.5 px-6 lg:bg-slate-100 border border-gray-500 text-slate-200 lg:text-gray-600  shadow text-sm md:text-sm lg:text-lg bg-purple-700 lg:hover:shadow-lg lg:hover:bg-green-600 lg:hover:text-white transition-all ease-in-out">
+                            class="rounded-md py-2.5 px-6 lg:bg-slate-100 border border-gray-500 text-slate-200 lg:text-gray-600  shadow text-sm md:text-sm lg:text-lg bg-purple-700 lg:hover:shadow-lg lg:hover:bg-green-600 lg:hover:text-white transition-all ease-in-out dark:bg-slate-400 dark:text-slate-200">
                             👀 See More</button>
                     </div>
                 </div>
@@ -798,11 +816,11 @@
         </section>
 
         <!-- Collections -->
-        <section class="bg-green-50 py-32">
+        <section class="dark:border-t dark:border-t-slate-500 bg-green-50 py-32 dark:bg-slate-800 dark:text-slate-300">
             <div class="w-10/12 md:w-8/12 mx-auto">
                 <div class="text-entern mb-6">
-                    <h3 class="text-2xl lg:text-4xl font-bold text-gray-600 text-center capitalize mb-2 font-Merri">Collections</h3>
-                    <p class="text-center text-gray-600 font-pt-sans text-sm">Discover List Of Top Places</p>
+                    <h3 class="text-2xl lg:text-4xl font-bold text-gray-600 dark:text-slate-300 text-center capitalize mb-2 font-Merri">Collections</h3>
+                    <p class="text-center text-gray-600dark:text-slate-300 font-pt-sans text-sm">Discover List Of Top Places</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 place-items-center">
                     <div class="relative w-52 h-64 overflow-hidden shadow-md hover:shadow-lg">
@@ -810,7 +828,7 @@
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
                                 <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Homes</h4>
-                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans dark:text-slate-300">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -819,7 +837,7 @@
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
                                 <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Lake</h4>
-                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">121 More</p>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans dark:text-slate-300">121 More</p>
                             </div>
                         </div>
                     </div>
@@ -828,7 +846,7 @@
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
                                 <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">Places</h4>
-                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">131 More</p>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans dark:text-slate-300">131 More</p>
                             </div>
                         </div>
                     </div>
@@ -837,7 +855,7 @@
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
                                 <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">Religion</h4>
-                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">231 More</p>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans dark:text-slate-300">231 More</p>
                             </div>
                         </div>
                     </div>
@@ -845,8 +863,8 @@
                         <img src="src/assets/img/img18.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Places</h4>
-                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri dark:text-slate-300">New Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans dark:text-slate-300">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -854,8 +872,8 @@
                         <img src="src/assets/img/img19.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Places</h4>
-                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri dark:text-slate-300">New Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans dark:text-slate-300">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -863,8 +881,8 @@
                         <img src="src/assets/img/img20.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Places</h4>
-                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri dark:text-slate-300">New Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans dark:text-slate-300">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -872,8 +890,8 @@
                         <img src="src/assets/img/img21.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Places</h4>
-                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri dark:text-slate-300">New Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans dark:text-slate-300">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -882,7 +900,7 @@
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
                                 <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">Hotels</h4>
-                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">251 More</p>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans dark:text-slate-300">251 More</p>
                             </div>
                         </div>
                     </div>
@@ -890,8 +908,8 @@
                         <img src="src/assets/img/img23.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Places</h4>
-                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri dark:text-slate-300">New Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans dark:text-slate-300">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -899,8 +917,8 @@
                         <img src="src/assets/img/img24.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Places</h4>
-                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri dark:text-slate-300">New Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans dark:text-slate-300">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -908,8 +926,8 @@
                         <img src="src/assets/img/img25.jpg" alt="" class="rounded w-full h-full object-cover shadow">
                         <div class="bg-gradient-to-t from-slate-800 via-transparent inset-0 absolute rounded">
                             <div class="absolute bottom-2 left-3">
-                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri">New Places</h4>
-                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans">201 More</p>
+                                <h4 class="text-gray-200 text-sm md:text-lg font-bold font-Merri dark:text-slate-300">New Places</h4>
+                                <p class="text-gray-200 text-xs md:text-sm font-pt-sans dark:text-slate-300">201 More</p>
                             </div>
                         </div>
                     </div>
@@ -917,20 +935,20 @@
                 </div>
                 <div class="mt-12 text-center">
                     <button type="button"
-                        class="rounded-md py-2.5 px-6 bg-purple-700 text-slate-100 lg:bg-slate-100 border border-gray-500 lg:text-gray-600  shadow text-xs md:text-sm lg:text-lg lg:hover:shadow-lg lg:hover:bg-green-600 lg:hover:text-white transition-all ease-in-out">
+                        class="rounded-md py-2.5 px-6 bg-purple-700 text-slate-100 lg:bg-slate-100 border border-gray-500 lg:text-gray-600  shadow text-xs md:text-sm lg:text-lg lg:hover:shadow-lg lg:hover:bg-green-600 lg:hover:text-white transition-all ease-in-out dark:bg-slate-400 dark:text-slate-200">
                         🎁 More Collections</button>
                 </div>
             </div>
         </section>
 
         <!-- Teams -->
-        <section class="bg-slate-400 py-32 relative">
+        <section class="dark:border-t dark:border-t-slate-500 bg-slate-400 py-32 relative dark:bg-slate-800 dark:text-slate-300">
             <div class="w-8/12 lg:w-10/12 xl:w-8/12 mx-auto">
                 <div class="flex flex-col lg:flex-row  items-center gap-12">
                     <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
-                        <div class="hidden lg:inline absolute h-full w-1/2 top-0 left-0 bottom-0 opacity-30"></div>
+                        <div class="team absolute h-full w-1/2 top-0 left-0 bottom-0 opacity-30 dark:bg-slate-800 "></div>
                         <div
-                            class="hidden lg:inline w-1/2 absolute h-full bg-gradient-to-l from-slate-400 via-transparent top-0 left-0 bottom-0 ">
+                            class="hidden lg:inline w-1/2 absolute h-full bg-gradient-to-l from-slate-400 via-transparent top-0 left-0 bottom-0 dark:from-slate-800 ">
                         </div>
                         <div class="flex flex-col md:flex-row justify-center gap-12">
                         <div class="flex gap-12 flex-col">
@@ -989,19 +1007,19 @@
                 </div>
                     <div class="w-full lg:w-1/2">
 
-                        <p class=" text-xs md:text-sm lg:text-base xl:text-lg font-bold uppercase text-slate-500 mb-1 font-pt-sans">Our Support Heros</p>
-                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-700 font-Merri">Meet Our Team</h2>
-                        <p class="mt-3 text-slate-600 text-sm md:text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <p class="dark:text-slate-500 text-xs md:text-sm lg:text-base xl:text-lg font-bold uppercase text-slate-500 mb-1 font-pt-sans">Our Support Heros</p>
+                        <h2 class="dark:text-slate-300 text-2xl md:text-3xl lg:text-4xl font-bold text-slate-700 font-Merri">Meet Our Team</h2>
+                        <p class="mt-3 text-slate-600 text-sm md:text-lg dark:text-slate-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Explicabo ab molestias fugit at quaerat fuga recusandae magni culpa consequatur adipisci,
                             expedita impedit voluptatem nulla cumque labore iure dignissimos? Aliquid, corporis?</p>
                         <div class="mt-8">
                             <button type="button"
-                                class="rounded-md  py-2 px-4 bg-slate-100 border border-gray-600 text-gray-600  shadow text-xs md:text-lg hover:shadow-lg hover:bg-gray-600 hover:text-white transition-all ease-in-out mr-1 md:mr-4">
+                                class="rounded-md  py-2 px-4 bg-slate-100 border border-gray-600 text-gray-600  shadow text-xs md:text-lg hover:shadow-lg hover:bg-gray-600 hover:text-white transition-all ease-in-out mr-1 md:mr-4  dark:text-slate-800 dark:bg-slate-300">
                                 <span class="material-icons align-middle mr-1 text-sm md:text-lg">
                                     people
                                 </span>Meet Us</button>
                             <button type="button"
-                                class="rounded-md  py-2 px-4 bg-slate-100 border border-gray-600 text-gray-600  shadow text-xs md:text-lg hover:shadow-lg hover:bg-gray-600 hover:text-white transition-all ease-in-out">
+                                class="rounded-md  py-2 px-4 bg-slate-100 border border-gray-600 text-gray-600  shadow text-xs md:text-lg hover:shadow-lg hover:bg-gray-600 hover:text-white transition-all ease-in-out dark:bg-slate-300 dark:text-slate-700">
                                 <span class="material-icons align-middle mr-1 text-sm md:text-lg">
                                     lightbulb
                                 </span>Learn More</button>
@@ -1013,14 +1031,14 @@
         </section>
 
         <!-- Testimonials -->
-        <section class="relative py-32 bg-gray-50 z-10">
-            <div class="bg-slate-100 w-8/12 absolute bottom-0 right-0 top-16 rounded-tl-lg -z-10">
+        <section class="dark:border-t dark:border-t-slate-500 relative py-32 bg-gray-50 z-10 dark:bg-slate-800 dark:text-slate-300">
+            <div class="bg-slate-100 w-8/12 absolute bottom-0 right-0 top-16 rounded-tl-lg -z-10 dark:bg-slate-900 dark:text-slate-300 dark:rounded-bl-lg">
 
             </div>
             <div class="w-8/12 lg:w-10/12 xl:w-8/12 mx-auto">
                 <div class="mb-10 md:mb-20">
                     <p class="text-xs md:text-sm font-bold uppercase text-slate-500 mb-1 font-pt-sans">Testimonials</p>
-                    <h2 class="text-xl md:text-3xl lg:text-4xl font-bold text-slate-600 w-full lg:w-5/12 font-Merri">What Our Customers Are Saying!</h2>
+                    <h2 class="dark:text-slate-300 text-xl md:text-3xl lg:text-4xl font-bold text-slate-600 w-full lg:w-5/12 font-Merri">What Our Customers Are Saying!</h2>
                 </div>
 
                 <div class="flex flex-col lg:flex-row">
@@ -1031,7 +1049,7 @@
                             <div class="absolute z-10 -top-6 -right-6">
                                 <div
                                     class="bg-purple-600 flex h-16 w-16 items-center justify-center rounded-full shadow-xl">
-                                    <span class="material-icons text-white text-5xl">
+                                    <span class="material-icons text-white text-5xl  dark:text-slate-300">
                                         format_quote
                                     </span>
                                 </div>
@@ -1041,20 +1059,20 @@
                         </div>
                         <div class="flex gap-3">
                             <button
-                                class="bg-green-600 text-white shadow rounded-md py-1 px-2 hover:shadow-lg hover:bg-green-700">
+                                class="bg-green-600 text-white shadow rounded-md py-1 px-2 hover:shadow-lg hover:bg-green-700  dark:text-slate-300">
                                 <span class="material-icons align-middle">
                                     keyboard_arrow_left
                                 </span>
                             </button>
                             <button
-                                class="bg-green-600 text-white shadow rounded-md py-1 px-2 hover:shadow-lg hover:bg-green-700">
+                                class="bg-green-600 text-white shadow rounded-md py-1 px-2 hover:shadow-lg hover:bg-green-700  dark:text-slate-300">
                                 <span class="material-icons align-middle">
                                     keyboard_arrow_right
                                 </span>
                             </button>
                         </div>
                     </div>
-                    <div class="w-full lg:w-1/2 text-slate-600">
+                    <div class="w-full lg:w-1/2 text-slate-600 dark:text-slate-300 dark:bg-slate-700 dark:shadow-md  dark:p-3 dark:rounded-md">
                         <p class="capitalize font-semibold text-xl md:text-2xl mb-3 font-pt-sans">Help us improve our community.
                         </p>
                         <p class="font-pt-sans text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -1063,8 +1081,8 @@
                             accusantium quas. Quisquam, quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. </p>
                         <div class="mt-4 font-pt-sans">
-                            <p class="text-slate-500 font-bold text-lg">- John Doe</p>
-                            <p class="text-slate-500 text-sm">Lead Marketing Manager</p>
+                            <p class=" font-bold text-lg"> - John Doe</p>
+                            <p class="text-sm">Lead Marketing Manager</p>
                         </div>
                     </div>
                 </div>
@@ -1073,15 +1091,15 @@
         </section>
 
         <!-- Contact us -->
-        <section class="lg:py-32 bg-purple-100">
+        <section class="dark:border-t dark:border-t-slate-500 lg:py-32 bg-purple-100 dark:bg-slate-800 dark:text-slate-300">
             <div class="w-full lg:w-11/12 xl:w-9/12 mx-auto">
                 <div class="shadow-lg lg:rounded-xl relative py-12 px-12 bg-cover bg-center z-10" style="background-image: url('./src/assets/img/hero-imgs/hero-img2.jpg');">
                     <!-- <img src="" alt="contact hero image" class="w-full
                     h-[46rem] rounded-xl object-cover"> -->
                     <div class="absolute inset-0 bg-black/70 h-full lg:rounded-xl -z-10"></div>
                     <!-- <div class="absolute top-24 left-8 right-8"> -->
-                        <div class="flex flex-col-reverse gap-12 lg:flex-row lg:gap-0 items-end">
-                            <div class="w-full lg:w-1/2 text-slate-100">
+                        <div class="flex flex-col-reverse gap-12 lg:flex-row lg:gap-0 items-end ">
+                            <div class="w-full lg:w-1/2 text-slate-100 dark:text-slate-300">
                                 <div class="mb-5">
                                     <h4 class="font-bold text-2xl md:text-3xl lg:text-4xl font-Merri mb5">Find Us</h4>
                                 </div>
@@ -1142,43 +1160,43 @@
 
                                 </div>
                             </div>
-                            <div class="w-full lg:w-1/2">
-                                <div class="bg-white max-w-lg rounded-md shadow p-6 space-y-6 ml-auto">
+                            <div class="w-full lg:w-1/2 ">
+                                <div class="bg-white max-w-lg rounded-md shadow p-6 space-y-6 ml-auto dark:bg-slate-800 dark:text-slate-300">
                                     <div>
-                                        <h4 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-600 font-Merri capitalize mb-4">Get in
+                                        <h4 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-600 dark:text-slate-300 font-Merri capitalize mb-4">Get in
                                             touch</h4>
-                                        <p class="text-xs   text-slate-500 font-pt-sans capitalize mb-2">Need help or have
+                                        <p class="text-xs text-slate-500 dark:text-slate-300 font-pt-sans capitalize mb-2">Need help or have
                                             some feedback for us?</p>
-                                        <p class="text-xs md:text-sm text-slate-500 font-pt-sans capitalize">Fill out the form
+                                        <p class="text-xs md:text-sm text-slate-500 dark:text-slate-300 dark:lg:hover:text-slate-600-sans capitalize">Fill out the form
                                             below to contact our team </p>
                                     </div>
 
-                                    <form action="" class="space-y-2">
+                                    <form action="" class="space-y-2 ">
                                         <div class="flex flex-col lg:flex-row gap-3">
                                             <div>
                                                 <label for="first-name"
-                                                    class="text-xs md:text-sm text-slate-500 font-pt-sans">First Name</label>
+                                                    class="text-xs md:text-sm text-slate-500 dark:text-slate-300">First Name</label>
                                                 <input type="text" name="first-name" placeholder="John" id="first-name"
-                                                    class="text-sm md:text-lg border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600 w-full">
+                                                    class="text-sm md:text-lg border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600 w-full dark:bg-slate-800 dark:text-slate-300">
                                             </div>
                                             <div>
-                                                <label for="last-name" class="text-xs md:text-sm text-slate-500 font-pt-sans">Last
+                                                <label for="last-name" class="text-xs md:text-sm text-slate-500 dark:text-slate-300">Last
                                                     Name</label>
                                                 <input type="text" name="last-name" placeholder="Doe" id="last-name"
-                                                    class="text-sm md:text-lg border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600 w-full">
+                                                    class="text-sm md:text-lg border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600 w-full dark:bg-slate-800 dark:text-slate-300">
                                             </div>
                                         </div>
                                         <div class="flex flex-col space-y-1">
-                                            <label for="email" class="text-xs md:text-sm text-slate-500 font-pt-sans">Email</label>
+                                            <label for="email" class="text-xs md:text-sm text-slate-500  dark:text-slate-300">Email</label>
                                             <input type="email" name="email" placeholder="johndoe@email.com" id="email"
-                                                class="text-sm md:text-lg border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600">
+                                                class="text-sm md:text-lg border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600 dark:bg-slate-800 dark:text-slate-300">
                                         </div>
                                         <div class="flex flex-col space-y-1">
                                             <label for="message"
-                                                class="text-xs md:text-sm text-slate-500 font-pt-sans">Message</label>
+                                                class="text-xs md:text-sm text-slate-500 dark:text-slate-300">Message</label>
                                             <textarea name="message" placeholder="Great job! I just have question..."
                                                 id="message" cols="30" rows="4"
-                                                class="text-sm md:text-lg border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600"></textarea>
+                                                class="text-sm md:text-lg border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-600 dark:bg-slate-800 dark:text-slate-300"></textarea>
                                         </div>
                                         <button type="submit"
                                             class="text-sm md:text-lg w-full bg-purple-600 text-white rounded-md py-2 px-4 hover:bg-purple-700">
@@ -1196,67 +1214,67 @@
             </div>
         </section>
         <!-- Feature -->
-        <section class="py-32 bg-slate-100">
+        <section class="dark:border-t dark:border-t-slate-500 py-32 bg-slate-100 dark:bg-slate-800 dark:text-slate-200">
             <div class="w-8/12 lg:w-10/12 xl:w-8/12 mx-auto">
-                <div class="text-center text-slate-600 mb-2">
+                <div class="text-center text-slate-600 dark:text-slate-300 mb-2">
                     <h4 class="font-bold text-2xl md:text-3xl lg:text-4xl font-Merri mb-5">Our Features</h4>
                     <p class="text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
                         quod.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-16">
-                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5">
-                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md">
+                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5 dark:lg:hover:bg-slate-600 cursor-pointer">
+                        <button class="p-2 text-slate-600 bg-slate-100 dark:bg-slate-300 rounded-md">
                             <span class="material-icons align-middle text-2xl md:text-4xl text-purple-600">chat</span>
                          
                         </button>
-                        <p class="text-bold text-sm md:text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Unlimited Chats</p>
-                        <p class="text-xs md:text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur
+                        <p class="text-bold text-sm md:text-xl text-slate-600 dark:text-slate-300 mt-3 mb- font-bold font-Merri">Unlimited Chats</p>
+                        <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-pt-sans">Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Quisquam, quod.</p>
                     </div>
-                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5">
-                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md">
+                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5 dark:lg:hover:bg-slate-600 cursor-pointer">
+                        <button class="p-2 text-slate-600 bg-slate-100 dark:bg-slate-300 rounded-md">
                          
                             <span class="material-icons align-middle text-2xl md:text-4xl text-purple-600">groups</span>
 
                         </button>
-                        <p class="text-bold text-sm md:text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Multiple Agent</p>
-                        <p class="text-xs md:text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur
+                        <p class="text-bold text-sm md:text-xl text-slate-600 dark:text-slate-300 mt-3 mb- font-bold font-Merri">Multiple Agent</p>
+                        <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-pt-sans">Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Quisquam, quod.</p>
                     </div>
-                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5">
-                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md">
+                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5 dark:lg:hover:bg-slate-600 cursor-pointer">
+                        <button class="p-2 text-slate-600 bg-slate-100 dark:bg-slate-300 rounded-md">
                             <span class="material-icons align-middle text-2xl md:text-4xl text-purple-600">schema</span>
                         </button>
-                        <p class="text-bold text-sm md:text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Departments</p>
-                        <p class="text-xs md:text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur
+                        <p class="text-bold text-sm md:text-xl text-slate-600 dark:text-slate-300 mt-3 mb- font-bold font-Merri">Departments</p>
+                        <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-pt-sans">Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Quisquam, quod.</p>
                     </div>
-                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5">
-                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md">
+                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5 dark:lg:hover:bg-slate-600 cursor-pointer">
+                        <button class="p-2 text-slate-600 bg-slate-100 dark:bg-slate-300 rounded-md">
                             <span class="material-icons align-middle text-2xl md:text-4xl text-purple-600">speed</span>
                          
 
                         </button>
-                        <p class="text-bold text-sm md:text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Super Fast</p>
-                        <p class="text-xs md:text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur
+                        <p class="text-bold text-sm md:text-xl text-slate-600 dark:text-slate-300 mt-3 mb- font-bold font-Merri">Super Fast</p>
+                        <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-pt-sans">Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Quisquam, quod.</p>
                     </div>
-                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5">
-                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md">
+                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5 dark:lg:hover:bg-slate-600 cursor-pointer">
+                        <button class="p-2 text-slate-600 bg-slate-100 dark:bg-slate-300 rounded-md">
                             <span class="material-icons align-middle text-2xl md:text-4xl text-purple-600">assignment</span>
                          
 
                         </button>
-                        <p class="text-bold text-sm md:text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Detailed Log</p>
-                        <p class="text-xs md:text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur
+                        <p class="text-bold text-sm md:text-xl text-slate-600 dark:text-slate-300 mt-3 mb- font-bold font-Merri">Detailed Log</p>
+                        <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-pt-sans">Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Quisquam, quod.</p>
                     </div>
-                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5">
-                        <button class="p-2 text-slate-600 bg-slate-100 rounded-md">
+                    <div class="p-4 rounded-md border-2 shadow-md lg:shadow-none lg:hover:bg-white lg:hover:shadow-lg mt-5 dark:lg:hover:bg-slate-600 cursor-pointer">
+                        <button class="p-2 text-slate-600 bg-slate-100 dark:bg-slate-300 rounded-md">
                             <span class="material-icons align-middle text-2xl md:text-4xl text-purple-600">insights</span>
                         </button>
-                        <p class="text-bold text-sm md:text-xl text-slate-600 mt-3 mb-2 font-bold font-Merri">Analytics</p>
-                        <p class="text-xs md:text-sm text-slate-500 font-pt-sans">Lorem ipsum dolor sit amet consectetur
+                        <p class="text-bold text-sm md:text-xl text-slate-600 dark:text-slate-300 mt-3 mb- font-bold font-Merri">Analytics</p>
+                        <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-pt-sans">Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Quisquam, quod.
                         </p>
                     </div>
@@ -1267,15 +1285,15 @@
         </section>
 
         <!-- Loading Section -->
-        <section class="py-32 bg-slate-200">
+        <section class="dark:border-t dark:border-t-slate-500 py-32 bg-slate-200 dark:bg-slate-800 dark:text-slate-200">
         <div class="w-8/12 lg:w-10/12 xl:w-8/12 mx-auto">
-            <div class="text-center text-slate-600 mb-10">
+            <div class="text-center text-slate-600  dark:text-slate-300 mb-10">
                 <h4 class="font-bold text-3xl lg:text-4xl font-Merri mb-2">Blog Posts</h4>
                 <p class="text-xs md:text-sm font-pt-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
                     quod.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse">
+                <div class="bg-slate-100 dark:bg-slate-600 dark:text-slate-200 dark:border-2 dark:shadow-md flex flex-col gap-1 shadow p-5 rounded-md animate-pulse">
                     <div class="rounded-full bg-slate-400 h-24 w-24"></div>
                     <div class="rounded-full bg-slate-400 h-4 w-24"></div>
 
@@ -1288,7 +1306,7 @@
                         <div class="shadow-sm rounded-full bg-slate-400 h-4 w-14"></div>
                     </div>
                 </div>
-                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse">
+                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse dark:bg-slate-600 dark:text-slate-200 dark:border-2 dark:shadow-md">
                     <div class="rounded-full bg-slate-400 h-24 w-24"></div>
                     <div class="rounded-full bg-slate-400 h-4 w-24"></div>
 
@@ -1301,7 +1319,7 @@
                         <div class="shadow-sm rounded-full bg-slate-400 h-4 w-14"></div>
                     </div>
                 </div>
-                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse">
+                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse dark:bg-slate-600 dark:text-slate-200 dark:border-2 dark:shadow-md">
                     <div class="rounded-full bg-slate-400 h-24 w-24"></div>
                     <div class="rounded-full bg-slate-400 h-4 w-24"></div>
 
@@ -1314,7 +1332,7 @@
                         <div class="shadow-sm rounded-full bg-slate-400 h-4 w-14"></div>
                     </div>
                 </div>
-                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse">
+                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse dark:bg-slate-600 dark:text-slate-200 dark:border-2 dark:shadow-md">
                     <div class="rounded-md bg-slate-400 h-32 w-34"></div>
                     <div class="rounded-full bg-slate-400 h-10 w-10"></div>
                     <div class="rounded-full bg-slate-400 h-4 w-25"></div>
@@ -1330,7 +1348,7 @@
                     </div>
                 </div>
 
-                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse">
+                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse dark:bg-slate-600 dark:text-slate-200 dark:border-2 dark:shadow-md">
                     <div class="rounded-md bg-slate-400 h-32 w-34"></div>
                     <div class="rounded-full bg-slate-400 h-10 w-10"></div>
                     <div class="rounded-full bg-slate-400 h-4 w-25"></div>
@@ -1345,7 +1363,7 @@
                         <div class="shadow-sm rounded-full bg-slate-400 h-4 w-24"></div>
                     </div>
                 </div>
-                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse">
+                <div class="bg-slate-100 flex flex-col gap-1 shadow p-5 rounded-md animate-pulse dark:bg-slate-600 dark:text-slate-200 dark:border-2 dark:shadow-md">
                     <div class="rounded-md bg-slate-400 h-32 w-34"></div>
                     <div class="rounded-full bg-slate-400 h-10 w-10"></div>
                     <div class="rounded-full bg-slate-400 h-4 w-25"></div>
@@ -1364,57 +1382,59 @@
             
             <div class="flex items-center justify-center">
                 <button
-                        class="py-2 px-6 border-2 border-slate-400 lg:bg-slate-200 font-pt-sans rounded-md mt-10 lg:text-slate-600 text-sm lg:text-xl text-slate-100 bg-purple-700 lg:hover:bg-purple-700 hover:text-white"
+                        class="py-2 px-6 border-2 border-slate-400 lg:bg-slate-200 font-pt-sans rounded-md mt-10 lg:text-slate-600 text-sm lg:text-xl text-slate-100 bg-purple-700 lg:hover:bg-purple-700 hover:text-white dark:bg-slate-600 dark:text-slate-300"
                         type="submit">📖Read More</button>
             </div>
             
         </div>
         </section>
             <!-- Footer -->
-            <div class="w-full h-2 bg-purple-700"></div>
-            <footer class="py-5 bg-slate-600">
+            <div class="w-full h-1 bg-purple-700"></div>
+            <footer class="py-5 bg-slate-500 dark:bg-slate-800">
             <div class="w-8/12 lg:w-10/12 xl:w-8/12 mx-auto">
                 <div class="flex flex-wrap justify-between py-5 lg:py-12 font-pt-sans gap-10 lg:gap-0">
                     <div>
                         <p class="font-bold uppercase mb-2 text-slate-300 font-Merri">Company</p>
                         <ul>
-                            <li><a href="#" class="text-slate-300">About Us</a></li>
-                            <li><a href="#" class="text-slate-300">Contact Us</a></li>
-                            <li><a href="#" class="text-slate-300">Support</a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300">About Us</a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300">Contact Us</a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300">Support</a></li>
                         </ul>
                     </div>
                     <div>
                         <p class="font-bold uppercase mb-2 text-slate-300 font-Merri">Business</p>
                         <ul>
-                            <li><a href="#" class="text-slate-300">Claim Business</a></li>
-                            <li><a href="#" class="text-slate-300">Advertise</a></li>
-                            <li><a href="#" class="text-slate-300">Sponsor</a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300">Claim Business</a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300">Advertise</a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300">Sponsor</a></li>
                         </ul>
                     </div>
                     <div>
                         <p class="font-bold uppercase mb-2 text-slate-300 font-Merri">Learn More</p>
                         <ul>
-                            <li><a href="#" class="text-slate-300">FAQ</a></li>
-                            <li><a href="#" class="text-slate-300">Get Help</a></li>
-                            <li><a href="#" class="text-slate-300">Code of Conduct</a></li>
-                            <li><a href="#" class="text-slate-300">Privacy Policy</a></li>
-                            <li><a href="#" class="text-slate-300">Terms And Conditions</a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300">FAQ</a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300">Get Help</a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300">Code of Conduct</a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300">Privacy Policy</a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300">Terms And Conditions</a></li>
                         </ul>
                     </div>
                     <div>
                         <p class="font-bold uppercase mb-2 text-slate-300 font-Merri">Follow Us</p>
                         <ul class="flex gap-2">
-                            <li><a href="#" class="text-slate-300"><i class="fab fa-facebook text-2xl"></i></a></li>
-                            <li><a href="#" class="text-slate-300"><i class="fab fa-instagram text-2xl"></i></a></li>
-                            <li><a href="#" class="text-slate-300"><i class="fab fa-twitter text-2xl"></i></a></li>
-                            <li><a href="#" class="text-slate-300"><i class="fab fa-telegram text-2xl"></i></a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300"><i class="fab fa-facebook text-2xl"></i></a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300"><i class="fab fa-instagram text-2xl"></i></a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300"><i class="fab fa-twitter text-2xl"></i></a></li>
+                            <li><a href="#" class="text-slate-200 dark:text-slate-300"><i class="fab fa-telegram text-2xl"></i></a></li>
                         </ul>
                     </div>
+                   
                 </div>
                 <div>
                     <p class="text-center text-slate-300 mt-10 font-pt-sans text-xs md:text-sm"><a href="#footer" class="">Travel & Tour ©
                             2021 All Rights Reserved</a></p>
                 </div>
+                
             </div>
         </footer>
     </main>
